@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Fifty50 Mineração</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Fifty50</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="planos.html">Planos</a></li>
+            <li><a href="calculadora.html">Calculadora</a></li>
+            <li><a href="login.html">Sair</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h1>Bem-vindo(a), <span id="nomeUsuario"></span>!</h1>
+
+    <h2>Seus Ganhos Simulados:</h2>
+
+    <p><strong>Investimento Inicial:</strong> R$ <span id="investimento"></span></p>
+    <p><strong>Percentual de Lucro Diário:</strong> <span id="percentual"></span>%</p>
+    <p><strong>Período:</strong> <span id="dias"></span> dias</p>
+    <p><strong>Saldo Final:</strong> R$ <span id="saldo"></span></p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Fifty50 Mineração - Todos os direitos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+    simularGanhos();
+</script>
+
+</body>
+</html>
