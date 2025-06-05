@@ -106,7 +106,7 @@
 </section>
 
 <footer>
-    <p>&copy; 2025 Fifty50 Mineração - Todos os direitos reservados.</p>
+    <p>&copy; 2025 Fiftymining Mineração - Todos os direitos reservados.</p>
 </footer>
 
 <script src="script.js"></script>
