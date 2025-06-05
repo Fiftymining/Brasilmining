@@ -1,12 +1,12 @@
 ![apple-touch-icon](https://github.com/user-attachments/assets/921c2266-a218-4838-92e7-495b355ab967)![Uploadi    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Fifty50 Mineração</title>
+    <title>Blog - Fiftymining Mineração</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <div class="logo">Fifty50</div>
+    <div class="logo">Fiftymining</div>
     <nav>
         <ul>
             <li><a href="index.html">Início</a></li>
@@ -42,7 +42,7 @@
 </section>
 
 <footer>
-    <p>&copy; 2025 Fifty50 Mineração - Todos os direitos reservados.</p>
+    <p>&copy; 2025 Fiftymining Mineração - Todos os direitos reservados.</p>
 </footer>
 
 <style>
@@ -69,13 +69,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora - Fifty50 Mineração</title>
+    <title>Calculadora - Fiftymining Mineração</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <div class="logo">Fifty50</div>
+    <div class="logo">Fiftymining</div>
     <nav>
         <ul>
             <li><a href="index.html">Início</a></li>
@@ -119,13 +119,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Fifty50 Mineração</title>
+    <title>Dashboard - Fiftymining Mineração</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <div class="logo">Fifty50</div>
+    <div class="logo">Fiftymining</div>
     <nav>
         <ul>
             <li><a href="index.html">Início</a></li>
@@ -148,7 +148,7 @@
 </section>
 
 <footer>
-    <p>&copy; 2025 Fifty50 Mineração - Todos os direitos reservados.</p>
+    <p>&copy; 2025 Fiftymining Mineração - Todos os direitos reservados.</p>
 </footer>
 
 <script src="script.js"></script>
