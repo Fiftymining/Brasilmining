@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pagamentos - FiftyMining</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>FiftyMining</h1>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="contratos.html">Contratos</a></li>
+        <li><a href="pagamentos.html" class="active">Pagamentos</a></li>
+        <li><a href="login.html">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Escolha o método de pagamento</h2>
+    <section class="pagamentos">
+      <div class="metodo-pagamento">
+        <h3>PIX</h3>
+        <p>Chave: <strong>contato@fiftymining.com</strong></p>
+        <p>Banco: Nubank</p>
+        <p>Após o pagamento, envie o comprovante por e-mail ou área do usuário.</p>
+      </div>
+
+      <div class="metodo-pagamento">
+        <h3>Criptomoeda</h3>
+        <p>Carteira Bitcoin:</p>
+        <code>bc1qexamplebitcoinwalletxxxyyyzz</code>
+        <p>Ou Ethereum:</p>
+        <code>0xexampleethereumwallet123456</code>
+      </div>
+
+      <div class="metodo-pagamento">
+        <h3>Boleto Bancário</h3>
+        <p>Emissão disponível após cadastro do plano.</p>
+        <button disabled>Gerar Boleto</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 FiftyMining. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

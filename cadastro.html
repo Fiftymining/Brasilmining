@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro - FiftyMining</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="form-container">
+    <h1>Criar Conta na FiftyMining</h1>
+    <form action="backend/processa_cadastro.php" method="POST">
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required />
+
+      <label for="confirmar_senha">Confirmar senha:</label>
+      <input type="password" id="confirmar_senha" name="confirmar_senha" required />
+
+      <label for="telefone">Telefone:</label>
+      <input type="text" id="telefone" name="telefone" />
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 FiftyMining</p>
+  </footer>
+</body>
+</html>
