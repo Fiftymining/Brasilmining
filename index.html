@@ -2,88 +2,58 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FiftyMining</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
     }
 
     header {
-      background-color: #111;
+      background-color: #000;
       padding: 20px;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     header h1 {
-      color: #FFD700;
+      color: #ECC440;
       margin: 0;
     }
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 15px;
-    }
-
-    nav ul li a {
-      color: #fff;
+    nav a {
+      color: #ECC440;
       text-decoration: none;
-      padding: 8px 16px;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover, nav ul li a.active {
-      background-color: #FFD700;
-      color: #000;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background-color: #1a1a1a;
-    }
-
-    .hero h2 {
-      font-size: 2em;
-      margin-bottom: 10px;
-      color: #FFD700;
-    }
-
-    .cta-button {
-      background-color: #FFD700;
-      color: #000;
-      padding: 10px 20px;
-      text-decoration: none;
+      margin-left: 20px;
       font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      background-color: #ECC440;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
       border-radius: 8px;
-      display: inline-block;
-      margin-top: 20px;
     }
 
-    .sobre {
-      padding: 40px 20px;
+    .btn:hover {
+      background-color: #d4ae2c;
+    }
+
+    main {
+      padding: 40px;
       text-align: center;
-    }
-
-    .sobre h2 {
-      color: #FFD700;
-    }
-
-    footer {
-      background-color: #111;
-      text-align: center;
-      padding: 20px;
-      color: #888;
     }
   </style>
 </head>
@@ -91,34 +61,19 @@
   <header>
     <h1>FiftyMining</h1>
     <nav>
-      <ul>
-        <li><a href="index.html" class="active">Início</a></li>
-        <li><a href="planos.html">Planos</a></li>
-        <li><a href="calculadora.html">Calculadora</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
+      <a href="index.html">Início</a>
+      <a href="planos.html">Planos</a>
+      <a href="calculadora.html">Calculadora</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html">Login</a>
+      <a href="blog.html">Blog</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <h2>Invista em mineração com segurança</h2>
-      <p>Planos acessíveis, lucros reais, gestão transparente.</p>
-      <a href="planos.html" class="cta-button">Ver Planos</a>
-    </section>
-
-    <section class="sobre">
-      <h2>Sobre a FiftyMining</h2>
-      <p>
-        A FiftyMining oferece serviços de mineração de criptomoedas com foco em simplicidade, retorno real e suporte transparente. Escolha um plano e acompanhe seus lucros diariamente. 
-      </p>
-    </section>
+    <h2>Invista com segurança e retorno garantido</h2>
+    <p>Conheça nossos planos de mineração e comece a lucrar hoje mesmo!</p>
+    <button class="btn" onclick="window.location.href='planos.html'">Ver Planos</button>
   </main>
-
-  <footer>
-    <p>&copy; 2025 FiftyMining. Todos os direitos reservados.</p>
-  </footer>
 </body>
 </html>
