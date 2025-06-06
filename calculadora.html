@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora de Investimento | FiftyMining</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f8f9fa;
+    }
+
+    header {
+      background-color: #1e1e2f;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 3rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    label, select, input {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #resultado {
+      margin-top: 1.5rem;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1e1e2f;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Calculadora de Retorno</h1>
+  </header>
+
+  <main>
+    <label for="plano">Escolha o plano:</label>
+    <select id="plano">
+      <option value="5000">Plano Inicial - R$ 5.000 (Retorno 50%)</option>
+      <option value="10000">Plano Avançado - R$ 10.000 (Retorno R$ 5.500)</option>
+      <option value="100000">Plano Empresarial - R$ 100.000 (Retorno R$ 60.000)</option>
+    </select>
+
+    <button onclick="calcular()">Calcular Retorno</button>
+
+    <div id="resultado"></div>
+  </main>
+
+  <footer>
+    &copy; 2025 FiftyMining. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function calcular() {
+      const plano = document.getElementById("plano").value;
+      let retorno;
+
+      if (plano == "5000") {
+        retorno = 5000 * 1.5; // 50%
+      } else if (plano == "10000") {
+        retorno = 10000 + 5500;
+      } else if (plano == "100000") {
+        retorno = 100000 + 60000;
+      }
+
+      document.getElementById("resultado").innerText = `Retorno estimado em 1 ano: R$ ${retorno.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+    }
+  </script>
+
+</body>
+</html>
+
