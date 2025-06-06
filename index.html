@@ -3,77 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FiftyMining</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>FiftyMining - Início</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
       background-color: #111;
       color: #fff;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    header {
+    .navbar {
       background-color: #000;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
     }
 
-    header h1 {
+    .navbar-brand, .nav-link {
+      color: #ECC440 !important;
+    }
+
+    .hero {
+      background: #000;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
       color: #ECC440;
-      margin: 0;
     }
 
-    nav a {
-      color: #ECC440;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
+    .hero p {
+      color: #ccc;
+      font-size: 1.2rem;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .btn {
+    .btn-gold {
       background-color: #ECC440;
       color: #000;
       border: none;
-      padding: 10px 20px;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 8px;
     }
 
-    .btn:hover {
-      background-color: #d4ae2c;
+    .btn-gold:hover {
+      background-color: #d4b431;
+      color: #000;
     }
 
-    main {
-      padding: 40px;
+    .section {
+      padding: 60px 20px;
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      color: #fff;
+      border: 1px solid #333;
+    }
+
+    .footer {
+      background-color: #000;
+      color: #aaa;
       text-align: center;
+      padding: 30px 10px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>FiftyMining</h1>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="planos.html">Planos</a>
-      <a href="calculadora.html">Calculadora</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="login.html">Login</a>
-      <a href="blog.html">Blog</a>
-    </nav>
-  </header>
 
-  <main>
-    <h2>Invista com segurança e retorno garantido</h2>
-    <p>Conheça nossos planos de mineração e comece a lucrar hoje mesmo!</p>
-    <button class="btn" onclick="window.location.href='planos.html'">Ver Planos</button>
-  </main>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">FiftyMining</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon bg-light"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="planos.html">Planos</a></li>
+          <li class="nav-item"><a class="nav-link" href="calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Invista com segurança em mineração digital</h1>
+      <p>Rendimentos reais, contratos automáticos e controle total do seu investimento</p>
+      <a href="planos.html" class="btn btn-gold mt-3">Ver Planos</a>
+    </div>
+  </section>
+
+  <section class="section text-center">
+    <div class="container">
+      <h2 class="mb-5" style="color: #ECC440;">Por que escolher a FiftyMining?</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card p-4">
+            <h4>Contratos Claros</h4>
+            <p>Você sabe exatamente quanto irá ganhar, por quanto tempo e quando termina.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4">
+            <h4>Pagamentos Mensais</h4>
+            <p>Rendimentos são liberados mensalmente. Transparência e facilidade.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4">
+            <h4>Monitoramento Diário</h4>
+            <p>Acompanhe seus lucros diariamente com nosso painel completo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 FiftyMining. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
