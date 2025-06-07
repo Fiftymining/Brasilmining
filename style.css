@@ -103,3 +103,17 @@ th {
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
 }
+.botao-pagamento {
+  background-color: #ECC440;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botao-pagamento:hover {
+  background-color: #d1ad32;
+}
