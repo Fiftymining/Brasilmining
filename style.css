@@ -117,3 +117,22 @@ th {
 .botao-pagamento:hover {
   background-color: #d1ad32;
 }
+.botao-pagamento {
+  background-color: #ECC440;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.botao-pagamento:hover {
+  background-color: #d4ae38;
+  box-shadow: 0 0 10px #ECC44066;
+  transform: scale(1.03);
+}
