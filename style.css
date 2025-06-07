@@ -1,125 +1,105 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* style.css - Tema escuro com dourado */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
-  color: #f0f0f0;
-  line-height: 1.6;
-  padding: 0;
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000000; /* fundo preto */
+  color: #ffffff; /* texto branco */
 }
 
-/* Cabeçalho */
-header {
-  background-color: #000;
-  color: #fff;
-  padding: 20px 0;
+header, footer {
+  background-color: #111111;
+  color: #ECC440;
+  padding: 1rem;
   text-align: center;
 }
 
-header h1 {
-  font-size: 2rem;
+a {
+  color: #ECC440;
+  text-decoration: none;
 }
 
-nav ul {
-  list-style: none;
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 10px;
+  gap: 2rem;
+  background-color: #1a1a1a;
+  padding: 1rem;
 }
 
-nav ul li a {
-  color: #ccc;
-  text-decoration: none;
+nav a {
   font-weight: bold;
-  padding: 8px 16px;
+}
+
+section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #1a1a1a;
   border-radius: 8px;
-  transition: background 0.3s;
+  box-shadow: 0 0 10px rgba(236, 196, 64, 0.1);
 }
 
-nav ul li a:hover,
-nav ul li a.ativo {
-  background-color: #1f1f1f;
-  color: #fff;
-}
-
-/* Conteúdo principal */
-main {
-  padding: 30px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Formulários */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: #1c1c1c;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-form label {
-  font-weight: bold;
-}
-
-form input,
-form select {
-  padding: 10px;
-  border-radius: 5px;
+button {
+  background-color: #ECC440;
+  color: #000000;
   border: none;
-  background-color: #2b2b2b;
-  color: #fff;
-}
-
-form button {
-  padding: 10px;
-  background-color: #0066cc;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s;
+  border-radius: 6px;
+  transition: background-color 0.3s;
 }
 
-form button:hover {
-  background-color: #004d99;
+button:hover {
+  background-color: #d4af37;
 }
 
-/* Tabelas */
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #ECC440;
+  border-radius: 4px;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
-  background-color: #1e1e1e;
+  margin-top: 2rem;
+  background-color: #111;
   color: #fff;
 }
 
-th,
-td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #333;
+th, td {
+  border: 1px solid #ECC440;
+  padding: 0.75rem;
+  text-align: center;
 }
 
 th {
-  background-color: #111;
+  background-color: #222;
+  color: #ECC440;
 }
 
-/* Rodapé */
-footer {
-  background-color: #000;
-  color: #888;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+.success {
+  color: #4CAF50;
+}
+
+.error {
+  color: #FF4C4C;
+}
+
+.highlight {
+  background-color: #ECC440;
+  color: #000;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
 }
