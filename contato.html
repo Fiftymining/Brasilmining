@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contato - FiftyMining</title>
+  <title>Contato - BrasilMining</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
@@ -13,73 +13,87 @@
       margin: 0;
       padding: 0;
     }
+
     header {
-      background-color: #000;
+      background-color: #002776;
       padding: 20px;
       text-align: center;
     }
+
     header h1 {
-      color: #ECC440;
+      color: #ecc440;
       margin: 0;
     }
+
     .container {
-      max-width: 600px;
+      max-width: 800px;
       margin: 40px auto;
       padding: 20px;
       background-color: #1a1a1a;
       border-radius: 10px;
     }
+
     h2 {
-      color: #ECC440;
+      color: #ecc440;
+      margin-bottom: 20px;
     }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
     label {
-      display: block;
-      margin-top: 15px;
+      margin: 10px 0 5px;
     }
-    input, textarea {
-      width: 100%;
+
+    input,
+    textarea {
       padding: 10px;
-      margin-top: 5px;
-      background-color: #000;
-      border: 1px solid #ECC440;
-      color: #fff;
+      border: none;
       border-radius: 5px;
+      background-color: #333;
+      color: #fff;
     }
+
     button {
       margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #ECC440;
+      padding: 10px;
+      background-color: #ecc440;
       color: #000;
-      font-weight: bold;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
+
     button:hover {
-      background-color: #d4ae2c;
+      background-color: #d4ad33;
     }
+
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #000;
-      color: #999;
+      background-color: #002776;
+      color: #ccc;
       margin-top: 40px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Fale Conosco</h1>
+    <h1>BrasilMining</h1>
   </header>
 
   <div class="container">
-    <h2>Entre em Contato</h2>
-    <form action="enviar_contato.php" method="POST">
+    <h2>Fale Conosco</h2>
+    <form action="mailto:seuemail@exemplo.com" method="post" enctype="text/plain">
       <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
+      <input type="text" id="nome" name="nome" required />
 
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
 
       <label for="mensagem">Mensagem:</label>
       <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
@@ -89,7 +103,7 @@
   </div>
 
   <footer>
-    &copy; 2025 FiftyMining. Todos os direitos reservados.
+    &copy; 2025 BrasilMining. Todos os direitos reservados.
   </footer>
 </body>
 </html>
