@@ -2,4 +2,86 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - BrasilMining</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #0e0e0e;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .login-container {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 30px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ecc440;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ecc440;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d4ad33;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login BrasilMining</h2>
+    <form action="verificar_login.php" method="POST">
+      <label for="usuario">Usuário</label>
+      <input type="text" id="usuario" name="usuario" required />
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" required />
+
+      <button type="submit">Entrar</button>
+    </form>
+    <div class="footer">
+      © 2025 BrasilMining. Todos os direitos reservados.
+    </div>
+  </div>
+</body>
+</html>
