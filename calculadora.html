@@ -3,134 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Calculadora de Investimento - FiftyMining</title>
+  <title>Calculadora - BrasilMining</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      background-color: #0e0e0e;
-      color: #fff;
+      background-color: #f5f5f5;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
     }
 
     header {
-      background-color: #000;
+      background-color: #002776;
       padding: 20px;
       text-align: center;
     }
 
     header h1 {
-      color: #ECC440;
+      color: #FFCC00;
       margin: 0;
     }
 
     .container {
       max-width: 600px;
       margin: 40px auto;
-      padding: 20px;
-      background-color: #1a1a1a;
+      background-color: #fff;
+      padding: 30px;
       border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #002776;
+      text-align: center;
     }
 
     label {
       display: block;
-      margin: 15px 0 5px;
-      color: #ECC440;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
     }
 
-    select, input {
+    input[type="number"] {
       width: 100%;
       padding: 10px;
-      margin-bottom: 15px;
-      background-color: #000;
-      color: #fff;
-      border: 1px solid #ECC440;
-      border-radius: 5px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
     }
 
     button {
-      width: 100%;
-      padding: 12px;
-      background-color: #ECC440;
-      color: #000;
-      font-weight: bold;
+      margin-top: 20px;
+      background-color: #002776;
+      color: #FFCC00;
       border: none;
-      border-radius: 5px;
+      padding: 12px;
+      font-size: 16px;
+      width: 100%;
+      border-radius: 6px;
       cursor: pointer;
+      transition: 0.3s ease;
     }
 
     button:hover {
-      background-color: #d4af37;
+      background-color: #001a4d;
     }
 
     .resultado {
-      margin-top: 20px;
-      background-color: #111;
+      margin-top: 30px;
+      background-color: #f0f8ff;
       padding: 15px;
-      border: 1px solid #333;
-      border-radius: 5px;
-    }
-
-    .resultado p {
-      margin: 5px 0;
-      color: #ccc;
+      border-radius: 6px;
+      color: #002776;
+      font-weight: bold;
+      text-align: center;
     }
 
     footer {
+      margin-top: 60px;
+      background-color: #002776;
+      color: #fff;
       text-align: center;
       padding: 20px;
-      background-color: #000;
-      color: #999;
-      margin-top: 40px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>FiftyMining</h1>
+    <h1>BrasilMining</h1>
   </header>
 
   <div class="container">
-    <h2>Simule seu Investimento</h2>
-    <label for="plano">Escolha o plano:</label>
-    <select id="plano">
-      <option value="5000">Plano Bronze - R$ 5.000 (Retorno: R$ 7.500)</option>
-      <option value="10000">Plano Ouro - R$ 10.000 (Retorno: R$ 15.500)</option>
-      <option value="100000">Plano Diamante - R$ 100.000 (Retorno: R$ 160.000)</option>
-    </select>
+    <h2>Calculadora de Retorno</h2>
+    <label for="valor">Valor do Investimento (R$):</label>
+    <input type="number" id="valor" placeholder="Ex: 10000" />
 
-    <button onclick="calcular()">Calcular</button>
+    <label for="dias">Quantidade de Dias:</label>
+    <input type="number" id="dias" placeholder="Ex: 30" />
 
-    <div class="resultado" id="resultado" style="display:none;">
-      <p><strong>Retorno Total:</strong> <span id="retornoTotal"></span></p>
-      <p><strong>Lucro ao mês:</strong> <span id="lucroMensal"></span></p>
-      <p><strong>Lucro ao dia (aproximado):</strong> <span id="lucroDiario"></span></p>
-      <p><strong>Duração:</strong> 12 meses (Contrato encerra automaticamente)</p>
-    </div>
+    <button onclick="calcularRetorno()">Calcular</button>
+
+    <div id="resultado" class="resultado" style="display: none;"></div>
   </div>
 
   <footer>
-    &copy; 2025 FiftyMining. Todos os direitos reservados.
+    &copy; 2025 BrasilMining. Todos os direitos reservados.
   </footer>
 
   <script>
-    function calcular() {
-      const plano = document.getElementById('plano').value;
-      let retorno = 0;
+    function calcularRetorno() {
+      const valor = parseFloat(document.getElementById('valor').value);
+      const dias = parseInt(document.getElementById('dias').value);
+      const resultadoDiv = document.getElementById('resultado');
 
-      if (plano == 5000) retorno = 7500;
-      else if (plano == 10000) retorno = 15500;
-      else if (plano == 100000) retorno = 160000;
+      if (!valor || !dias || valor <= 0 || dias <= 0) {
+        resultadoDiv.style.display = 'block';
+        resultadoDiv.innerText = 'Por favor, insira valores válidos.';
+        return;
+      }
 
-      const lucroTotal = retorno - plano;
-      const lucroMensal = lucroTotal / 12;
-      const lucroDiario = lucroTotal / 365;
+      const lucroDiario = valor * 0.001416; // 0.1416% ao dia
+      const retorno = lucroDiario * dias;
+      const total = valor + retorno;
 
-      document.getElementById('retornoTotal').textContent = `R$ ${retorno.toFixed(2)}`;
-      document.getElementById('lucroMensal').textContent = `R$ ${lucroMensal.toFixed(2)}`;
-      document.getElementById('lucroDiario').textContent = `R$ ${lucroDiario.toFixed(2)}`;
-      document.getElementById('resultado').style.display = 'block';
+      resultadoDiv.style.display = 'block';
+      resultadoDiv.innerHTML = `
+        Retorno em ${dias} dias: <strong>R$ ${retorno.toFixed(2)}</strong><br>
+        Total previsto: <strong>R$ ${total.toFixed(2)}</strong>
+      `;
     }
   </script>
 </body>

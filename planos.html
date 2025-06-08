@@ -3,29 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Planos - FiftyMining</title>
+  <title>Planos - BrasilMining</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      background-color: #0e0e0e;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
     }
 
     header {
-      background-color: #000;
+      background-color: #002776;
+      color: #FFCC00;
       padding: 20px;
       text-align: center;
     }
 
-    header h1 {
-      color: #ECC440;
+    h1 {
       margin: 0;
+      font-size: 2em;
     }
 
-    .planos {
+    .container {
       display: flex;
       justify-content: center;
       gap: 30px;
@@ -33,87 +33,83 @@
       padding: 40px 20px;
     }
 
-    .plan-card {
-      background-color: #1a1a1a;
-      border: 1px solid #333;
+    .plano {
+      background-color: #fff;
+      border: 2px solid #002776;
       border-radius: 12px;
-      padding: 30px;
+      padding: 20px;
       width: 300px;
-      text-align: center;
-      box-shadow: 0 0 10px #000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .plan-card h3 {
-      color: #ECC440;
-      font-size: 24px;
-      margin-bottom: 10px;
+    .plano h2 {
+      color: #002776;
+      font-size: 1.5em;
     }
 
-    .price {
-      font-size: 22px;
-      color: #fff;
+    .plano p {
+      font-size: 1.1em;
       margin: 10px 0;
     }
 
-    .plan-card p {
-      margin: 8px 0;
-      color: #ccc;
-    }
-
-    .btn-primary {
+    .btn-pagar {
       display: inline-block;
-      margin-top: 15px;
-      padding: 10px 25px;
-      background-color: #ECC440;
-      color: #000;
+      background-color: #FFCC00;
+      color: #002776;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
+      margin-top: 15px;
+      transition: background 0.3s;
     }
 
-    .btn-primary:hover {
-      background-color: #d4ae30;
+    .btn-pagar:hover {
+      background-color: #e6b800;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #000;
-      color: #999;
+      background-color: #002776;
+      color: #fff;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Planos de Investimento</h1>
+    <h1>BrasilMining - Planos de Investimento</h1>
   </header>
 
-  <div class="planos">
-    <div class="plan-card">
-      <h3>Plano Bronze</h3>
-      <p class="price">R$ 5.000</p>
-      <p>Retorno total: R$ 7.500<br>Em 12 meses (50%)<br>Lucros mensais disponíveis</p>
-      <a href="https://pag.ae/7_JTKWo2P" target="_blank" class="btn-primary">Pagar agora</a>
+  <div class="container">
+    <div class="plano">
+      <h2>Plano Inicial</h2>
+      <p>Investimento: R$ 5.000,00</p>
+      <p>Lucro Diário: R$ 7,00</p>
+      <p>Duração: 12 meses</p>
+      <a class="btn-pagar" href="https://pag.ae/7_JTKWo2P" target="_blank">Pagar agora</a>
+    </div>
+    
+    <div class="plano">
+      <h2>Plano Ouro</h2>
+      <p>Investimento: R$ 10.000,00</p>
+      <p>Lucro Diário: R$ 14,16</p>
+      <p>Duração: 12 meses</p>
+      <a class="btn-pagar" href="https://pag.ae/7_JTLwwba" target="_blank">Pagar agora</a>
     </div>
 
-    <div class="plan-card">
-      <h3>Plano Prata</h3>
-      <p class="price">R$ 10.000</p>
-      <p>Retorno total: R$ 15.500<br>Em 12 meses (55%)<br>Lucros mensais disponíveis</p>
-      <a href="https://pag.ae/7_JTLwwba" target="_blank" class="btn-primary">Pagar agora</a>
-    </div>
-
-    <div class="plan-card">
-      <h3>Plano Ouro</h3>
-      <p class="price">R$ 100.000</p>
-      <p>Retorno total: R$ 160.000<br>Em 12 meses (60%)<br>Lucros mensais disponíveis</p>
-      <a href="https://pag.ae/7_JTM32ra" target="_blank" class="btn-primary">Pagar agora</a>
+    <div class="plano">
+      <h2>Plano Elite</h2>
+      <p>Investimento: R$ 100.000,00</p>
+      <p>Lucro Diário: R$ 166,66</p>
+      <p>Duração: 12 meses</p>
+      <a class="btn-pagar" href="https://pag.ae/7_JTM32ra" target="_blank">Pagar agora</a>
     </div>
   </div>
 
   <footer>
-    &copy; 2025 FiftyMining. Todos os direitos reservados.
+    &copy; 2025 BrasilMining. Todos os direitos reservados.
   </footer>
 </body>
 </html>

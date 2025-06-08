@@ -1,96 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - FiftyMining</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel do Usuário - BrasilMining</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      background-color: #0f0f0f;
-      color: #fff;
-      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
+      padding: 0;
+      color: #002776;
     }
 
     header {
-      background-color: #1a1a1a;
+      background-color: #002776;
       padding: 20px;
       text-align: center;
     }
 
     header h1 {
-      color: #ECC440;
+      color: #FFCC00;
       margin: 0;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 20px;
-    }
-
-    .card {
-      background-color: #1c1c1c;
+      background-color: #fff;
       border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(236, 196, 64, 0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    .card h2 {
-      color: #ECC440;
-      margin-bottom: 10px;
+    h2 {
+      color: #002776;
+      border-bottom: 2px solid #FFCC00;
+      padding-bottom: 5px;
     }
 
     .info {
-      font-size: 1.2em;
-      margin: 10px 0;
-      color: #ccc;
+      margin: 20px 0;
+      padding: 15px;
+      background-color: #e8ecf0;
+      border-left: 5px solid #FFCC00;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #ECC440;
-      color: #111;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
+    .info p {
+      margin: 5px 0;
+      font-size: 1.1em;
     }
 
-    .btn:hover {
-      background-color: #ffd700;
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #002776;
+      color: #fff;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Área do Investidor - FiftyMining</h1>
+    <h1>BrasilMining</h1>
   </header>
 
   <div class="container">
-    <div class="card">
-      <h2>Seus Investimentos</h2>
-      <p class="info">Plano atual: <strong>Ouro</strong></p>
-      <p class="info">Investido: <strong>R$ 100.000</strong></p>
-      <p class="info">Lucro acumulado: <strong>R$ 80.000</strong></p>
-      <p class="info">Contrato encerra em: <strong>05/06/2026</strong></p>
-    </div>
+    <h2>Painel do Usuário</h2>
 
-    <div class="card">
-      <h2>Últimos Rendimentos</h2>
-      <p class="info">05/06 - R$ 200,00</p>
-      <p class="info">04/06 - R$ 200,00</p>
-      <p class="info">03/06 - R$ 200,00</p>
-    </div>
-
-    <div class="card">
-      <h2>Ações Rápidas</h2>
-      <a href="#" class="btn">Sacar Rendimentos</a>
-      <a href="#" class="btn">Renovar Plano</a>
+    <div class="info">
+      <p><strong>Nome do Investidor:</strong> João da Silva</p>
+      <p><strong>Plano:</strong> Plano Ouro</p>
+      <p><strong>Valor Investido:</strong> R$ 10.000,00</p>
+      <p><strong>Data de Início:</strong> 06/06/2025</p>
+      <p><strong>Data de Encerramento:</strong> 06/06/2026</p>
+      <p><strong>Lucro Diário:</strong> R$ 14,16</p>
+      <p><strong>Retorno Previsto:</strong> R$ 15.500,00</p>
+      <p><strong>Status:</strong> Contrato Ativo</p>
     </div>
   </div>
+
+  <footer>
+    &copy; 2025 BrasilMining. Todos os direitos reservados.
+  </footer>
 </body>
 </html>

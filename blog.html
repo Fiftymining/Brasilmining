@@ -1,84 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog | FiftyMining</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog - BrasilMining</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
+      background-color: #f4f4f4;
     }
 
     header {
-      background-color: #1e1e2f;
+      background-color: #002776;
       color: #fff;
-      padding: 1rem 2rem;
+      padding: 20px;
       text-align: center;
     }
 
-    h1 {
+    header h1 {
       margin: 0;
+      color: #FFCC00;
     }
 
-    .content {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    nav {
+      background-color: #001f4d;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #FFCC00;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
     }
 
     .post {
-      background: #fff;
-      padding: 1.5rem;
+      background-color: #fff;
+      padding: 25px;
+      border-left: 8px solid #002776;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.08);
-      margin-bottom: 1.5rem;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     .post h2 {
       margin-top: 0;
-      color: #1e1e2f;
+      color: #002776;
     }
 
     .post p {
-      color: #444;
+      color: #333;
       line-height: 1.6;
     }
 
+    .post small {
+      display: block;
+      margin-top: 10px;
+      color: #777;
+    }
+
     footer {
-      background-color: #1e1e2f;
-      color: #fff;
       text-align: center;
-      padding: 1rem;
-      position: relative;
-      bottom: 0;
-      width: 100%;
+      padding: 20px;
+      background-color: #002776;
+      color: #fff;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Blog FiftyMining</h1>
+    <h1>BrasilMining</h1>
   </header>
 
-  <div class="content">
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="planos.html">Planos</a>
+    <a href="calculadora.html">Calculadora</a>
+    <a href="login.html">Login</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="contratos.html">Contratos</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+
+  <div class="container">
     <div class="post">
-      <h2>Bem-vindo ao nosso Blog!</h2>
-      <p>Este é o espaço onde você encontrará novidades sobre mineração de criptomoedas, atualizações da plataforma e dicas exclusivas de investimentos. Fique atento às próximas postagens!</p>
+      <h2>Como funcionam os contratos da BrasilMining?</h2>
+      <p>
+        Os contratos da BrasilMining duram exatamente 12 meses e encerram-se automaticamente após esse período. O investimento inicial é transformado em lucro por meio de mineração digital com tecnologia de ponta.
+      </p>
+      <small>Publicado em 07/06/2025</small>
     </div>
 
     <div class="post">
-      <h2>Dicas para Iniciantes em Criptomoedas</h2>
-      <p>Quer investir em criptomoedas mas não sabe por onde começar? Em breve publicaremos um guia completo para você dar os primeiros passos com segurança e clareza.</p>
+      <h2>Plano Diamante: retorno de até R$ 80.000 em 12 meses</h2>
+      <p>
+        O Plano Diamante é ideal para investidores que buscam grandes resultados com segurança. Com investimento de R$ 100.000, o retorno pode chegar até R$ 180.000 ao final do contrato.
+      </p>
+      <small>Publicado em 05/06/2025</small>
+    </div>
+
+    <div class="post">
+      <h2>BrasilMining agora aceita pagamentos via PIX e PagSeguro</h2>
+      <p>
+        Visando facilitar a adesão de novos investidores, implementamos métodos de pagamento modernos e seguros como PIX, boleto e PagSeguro. Simples, rápido e confiável.
+      </p>
+      <small>Publicado em 04/06/2025</small>
     </div>
   </div>
 
   <footer>
-    &copy; 2025 FiftyMining. Todos os direitos reservados.
+    &copy; 2025 BrasilMining. Todos os direitos reservados.
   </footer>
-
 </body>
 </html>
