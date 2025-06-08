@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      background-color: #0e0e0e;
-      color: #fff;
+      background-color: #f4f4f4;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
@@ -21,63 +20,68 @@
     }
 
     header h1 {
-      color: #ecc440;
+      color: #ECC440;
       margin: 0;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 700px;
       margin: 40px auto;
-      padding: 20px;
-      background-color: #1a1a1a;
+      padding: 30px;
+      background-color: #fff;
       border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     h2 {
-      color: #ecc440;
+      color: #002776;
+      text-align: center;
       margin-bottom: 20px;
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
     label {
-      margin: 10px 0 5px;
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
     }
 
-    input,
-    textarea {
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      background-color: #333;
-      color: #fff;
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      font-size: 1rem;
     }
 
     button {
-      margin-top: 20px;
-      padding: 10px;
-      background-color: #ecc440;
-      color: #000;
+      background-color: #002776;
+      color: #ECC440;
       border: none;
-      border-radius: 5px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 6px;
       cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
+      transition: 0.3s;
     }
 
     button:hover {
-      background-color: #d4ad33;
+      background-color: #001c55;
     }
 
     footer {
+      background-color: #002776;
+      color: #fff;
       text-align: center;
       padding: 20px;
-      background-color: #002776;
-      color: #ccc;
-      margin-top: 40px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -87,16 +91,16 @@
   </header>
 
   <div class="container">
-    <h2>Fale Conosco</h2>
-    <form action="mailto:seuemail@exemplo.com" method="post" enctype="text/plain">
-      <label for="nome">Nome:</label>
+    <h2>Entre em Contato</h2>
+    <form action="enviar_contato.php" method="post">
+      <label for="nome">Seu nome</label>
       <input type="text" id="nome" name="nome" required />
 
-      <label for="email">Email:</label>
+      <label for="email">Seu e-mail</label>
       <input type="email" id="email" name="email" required />
 
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
 
       <button type="submit">Enviar</button>
     </form>
