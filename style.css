@@ -1,88 +1,143 @@
-/* BrasilMining - Estilo principal */
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
   color: #002776;
+  line-height: 1.6;
 }
 
+/* Cabeçalho */
 header {
   background-color: #002776;
-  color: #fff;
   padding: 20px;
   text-align: center;
 }
 
 header h1 {
-  margin: 0;
-  font-size: 28px;
-  color: #ECC440;
+  color: #FFCC00;
+  font-size: 2rem;
 }
 
+/* Menu de navegação */
 nav {
   background-color: #001f4d;
+  display: flex;
+  justify-content: center;
   padding: 10px;
-  text-align: center;
 }
 
 nav a {
-  color: #ECC440;
-  margin: 0 15px;
+  color: #FFCC00;
   text-decoration: none;
+  margin: 0 15px;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #ffffff;
 }
 
-main {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-footer {
-  background-color: #002776;
-  color: #fff;
-  text-align: center;
+/* Container principal */
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
   padding: 20px;
-  margin-top: 40px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Botões padrão */
 button,
 .btn {
-  background-color: #ECC440;
+  background-color: #FFCC00;
   color: #002776;
+  padding: 10px 20px;
   border: none;
-  padding: 12px 20px;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
+  text-decoration: none;
 }
 
 button:hover,
 .btn:hover {
-  background-color: #ffdb4d;
+  background-color: #e6b800;
 }
 
-.card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 25px;
-  margin: 20px auto;
-  max-width: 600px;
+/* Rodapé */
+footer {
+  background-color: #002776;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
 }
 
-.card h2 {
+/* Estilo para títulos */
+h2, h3, h4 {
   color: #002776;
+  margin-bottom: 10px;
 }
 
-.card p {
-  color: #333;
+/* Formulários */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
 }
+
+input:focus,
+textarea:focus {
+  border-color: #002776;
+  outline: none;
+}
+
+/* Tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #002776;
+  color: #fff;
+  padding: 12px;
+}
+
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .container {
+    margin: 10px;
+  }
+}
+
