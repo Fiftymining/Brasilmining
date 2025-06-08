@@ -7,70 +7,87 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f7f7f7;
-  color: #002776;
+  background-color: #f4f4f4;
+  color: #333;
   line-height: 1.6;
 }
 
 /* Cabeçalho */
 header {
   background-color: #002776;
-  padding: 20px;
+  color: #fff;
+  padding: 20px 0;
   text-align: center;
 }
 
 header h1 {
-  color: #FFCC00;
-  font-size: 2rem;
+  font-size: 2em;
+  color: #ECC440;
 }
 
-/* Menu de navegação */
+/* Navegação */
 nav {
-  background-color: #001f4d;
+  background-color: #001f5f;
   display: flex;
   justify-content: center;
-  padding: 10px;
+  gap: 20px;
+  padding: 10px 0;
 }
 
 nav a {
-  color: #FFCC00;
+  color: #fff;
   text-decoration: none;
-  margin: 0 15px;
   font-weight: bold;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #ffffff;
+  color: #ECC440;
 }
 
 /* Container principal */
 .container {
-  max-width: 1200px;
-  margin: 30px auto;
+  max-width: 1100px;
+  margin: 40px auto;
   padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Botões padrão */
-button,
-.btn {
-  background-color: #FFCC00;
+/* Títulos */
+h2, h3 {
   color: #002776;
-  padding: 10px 20px;
+  margin-bottom: 15px;
+}
+
+/* Botões */
+button, .btn, input[type="submit"] {
+  background-color: #ECC440;
+  color: #002776;
   border: none;
-  border-radius: 8px;
+  padding: 10px 20px;
   font-weight: bold;
+  border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease;
-  text-decoration: none;
 }
 
-button:hover,
-.btn:hover {
-  background-color: #e6b800;
+button:hover, .btn:hover, input[type="submit"]:hover {
+  background-color: #ffd700;
+}
+
+/* Campos de formulário */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 /* Rodapé */
@@ -78,66 +95,42 @@ footer {
   background-color: #002776;
   color: #fff;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   margin-top: 40px;
 }
 
-/* Estilo para títulos */
-h2, h3, h4 {
-  color: #002776;
-  margin-bottom: 10px;
-}
-
-/* Formulários */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea,
-select {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0 20px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: #f9f9f9;
-}
-
-input:focus,
-textarea:focus {
-  border-color: #002776;
-  outline: none;
+/* Estilo especial para destaques */
+.destaque {
+  color: #ECC440;
+  font-weight: bold;
 }
 
 /* Tabelas */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
-table, th, td {
+table th, table td {
   border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
 }
 
-th {
+table th {
   background-color: #002776;
   color: #fff;
-  padding: 12px;
-}
-
-td {
-  padding: 10px;
-  text-align: left;
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
+    gap: 10px;
   }
 
   .container {
-    margin: 10px;
+    margin: 20px;
   }
 }
-
