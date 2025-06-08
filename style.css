@@ -1,25 +1,16 @@
-/* Cores oficiais */
-:root {
-  --azul-bb: #002776;
-  --amarelo-bb: #FFCC00;
-  --amarelo-escuro: #e6b800;
-  --preto: #000000;
-  --cinza: #f4f4f4;
-  --cinza-claro: #e0e0e0;
-  --branco: #ffffff;
-}
+/* BrasilMining - Estilo principal */
 
 body {
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--cinza);
-  color: var(--preto);
+  background-color: #f9f9f9;
+  color: #002776;
 }
 
 header {
-  background-color: var(--azul-bb);
-  color: var(--branco);
+  background-color: #002776;
+  color: #fff;
   padding: 20px;
   text-align: center;
 }
@@ -27,18 +18,19 @@ header {
 header h1 {
   margin: 0;
   font-size: 28px;
+  color: #ECC440;
 }
 
 nav {
-  background-color: var(--amarelo-bb);
+  background-color: #001f4d;
   padding: 10px;
   text-align: center;
 }
 
 nav a {
-  color: var(--azul-bb);
-  text-decoration: none;
+  color: #ECC440;
   margin: 0 15px;
+  text-decoration: none;
   font-weight: bold;
 }
 
@@ -46,41 +38,51 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.container {
+main {
+  padding: 40px 20px;
   max-width: 1000px;
-  margin: 40px auto;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #002776;
+  color: #fff;
+  text-align: center;
   padding: 20px;
-  background-color: var(--branco);
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  margin-top: 40px;
 }
 
-h2 {
-  color: var(--azul-bb);
-  margin-top: 0;
-}
-
+button,
 .btn {
-  display: inline-block;
-  background-color: var(--amarelo-bb);
-  color: var(--azul-bb);
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
+  background-color: #ECC440;
+  color: #002776;
   border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
+button:hover,
 .btn:hover {
-  background-color: var(--amarelo-escuro);
+  background-color: #ffdb4d;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: var(--azul-bb);
-  color: var(--branco);
-  margin-top: 40px;
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.card h2 {
+  color: #002776;
+}
+
+.card p {
+  color: #333;
 }
