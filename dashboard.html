@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Painel do Usuário - BrasilMining</title>
+  <title>Dashboard - BrasilMining</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      background-color: #f5f5f5;
+      background-color: #f0f0f0;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
@@ -27,11 +27,11 @@
 
     .container {
       max-width: 1000px;
-      margin: 40px auto;
+      margin: 30px auto;
       padding: 20px;
-      background-color: #fff;
+      background-color: white;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px #ccc;
     }
 
     h2 {
@@ -40,16 +40,21 @@
       padding-bottom: 5px;
     }
 
-    .info {
-      margin: 20px 0;
-      padding: 15px;
-      background-color: #e8ecf0;
-      border-left: 5px solid #FFCC00;
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
     }
 
-    .info p {
-      margin: 5px 0;
-      font-size: 1.1em;
+    .card {
+      background-color: #FFCC00;
+      padding: 20px;
+      border-radius: 10px;
+      color: #002776;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      font-weight: bold;
+      text-align: center;
     }
 
     footer {
@@ -67,17 +72,13 @@
   </header>
 
   <div class="container">
-    <h2>Painel do Usuário</h2>
-
-    <div class="info">
-      <p><strong>Nome do Investidor:</strong> João da Silva</p>
-      <p><strong>Plano:</strong> Plano Ouro</p>
-      <p><strong>Valor Investido:</strong> R$ 10.000,00</p>
-      <p><strong>Data de Início:</strong> 06/06/2025</p>
-      <p><strong>Data de Encerramento:</strong> 06/06/2026</p>
-      <p><strong>Lucro Diário:</strong> R$ 14,16</p>
-      <p><strong>Retorno Previsto:</strong> R$ 15.500,00</p>
-      <p><strong>Status:</strong> Contrato Ativo</p>
+    <h2>Minha Área</h2>
+    <div class="info-grid">
+      <div class="card">Plano Atual: Ouro</div>
+      <div class="card">Investimento: R$ 10.000,00</div>
+      <div class="card">Retorno Total: R$ 15.500,00</div>
+      <div class="card">Lucro Diário: R$ 14,16</div>
+      <div class="card">Contrato Ativo até: 06/06/2026</div>
     </div>
   </div>
 
