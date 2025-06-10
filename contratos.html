@@ -5,85 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contratos | BrasilInvesting</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .contrato-box {
-      background-color: #f9f9f9;
-      color: #002776;
-      padding: 30px;
-      max-width: 900px;
-      margin: 40px auto;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .contrato-box h2 {
-      color: #002776;
-      margin-bottom: 20px;
-    }
-
-    .contrato-box p {
-      line-height: 1.6;
-      margin: 10px 0;
-    }
-
-    .contrato-box .destaque {
-      color: #FFCC00;
-      font-weight: bold;
-    }
-
-    .contrato-box hr {
-      margin: 30px 0;
-      border: 1px solid #ccc;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #002776;
-      color: #fff;
-      margin-top: 40px;
-    }
-  </style>
 </head>
 <body>
   <header class="header">
-    <div class="logo">BrasilInvesting</div>
-    <nav class="nav">
-      <a href="index.html">Início</a>
-      <a href="planos.html">Planos</a>
-      <a href="calculadora.html">Calculadora</a>
-      <a href="contratos.html" class="ativo">Contratos</a>
-      <a href="contato.html">Contato</a>
-      <a href="blog.html">Blog</a>
-      <a href="login.html">Login</a>
-    </nav>
+    <div class="container">
+      <h1 class="logo">BrasilInvesting</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="planos.html">Planos</a></li>
+          <li><a href="calculadora.html">Calculadora</a></li>
+          <li><a href="contratos.html" class="active">Contratos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <div class="contrato-box">
-    <h2>Resumo do Contrato</h2>
-    <p><span class="destaque">Investimento inicial:</span> R$ 10.000,00</p>
-    <p><span class="destaque">Data de início:</span> 10/06/2025</p>
-    <p><span class="destaque">Data de encerramento:</span> 10/06/2027</p>
-    <p><span class="destaque">Retorno mensal estimado:</span> R$ 500,00</p>
-    <p><span class="destaque">Lucro acumulado ao final:</span> R$ 12.000,00</p>
-    <p><span class="destaque">Status:</span> Contrato ativo</p>
+  <main class="container">
+    <section class="contrato-detalhes">
+      <h2>Informações sobre os Contratos</h2>
+      <p>Na <strong>BrasilInvesting</strong>, nossos contratos de investimento foram criados para garantir segurança, transparência e alta rentabilidade aos nossos clientes.</p>
 
-    <hr>
+      <ul class="contrato-info">
+        <li><strong>Valor mínimo:</strong> R$ 5.000</li>
+        <li><strong>Duração do contrato:</strong> 24 meses</li>
+        <li><strong>Rentabilidade:</strong> 5% ao mês sobre o valor investido</li>
+        <li><strong>Saque:</strong> Liberado após 45 dias da ativação do contrato</li>
+        <li><strong>Rendimento acumulado:</strong> O cliente pode optar por sacar mensalmente ou acumular o rendimento</li>
+        <li><strong>Cancelamento automático:</strong> Ao final dos 24 meses o contrato é encerrado automaticamente</li>
+      </ul>
 
-    <p>
-      Este contrato tem duração mínima de <strong>24 meses</strong>. Após esse período, ele é <strong>encerrado automaticamente</strong>, sem renovação.
-    </p>
-    <p>
-      Os saques são liberados <strong>após 45 dias</strong> da ativação. O cliente pode sacar mensalmente ou acumular os rendimentos.
-    </p>
-    <p>
-      Valor mínimo para contratação: <strong>R$ 5.000,00</strong>.
-    </p>
-  </div>
+      <p>Se tiver dúvidas, entre em contato com nosso <a href="contato.html"><strong>suporte</strong></a>. Um gerente especializado estará pronto para ajudar.</p>
+    </section>
+  </main>
 
-  <footer>
-    &copy; 2025 BrasilInvesting. Todos os direitos reservados.
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 BrasilInvesting. Todos os direitos reservados.</p>
+    </div>
   </footer>
 </body>
 </html>
