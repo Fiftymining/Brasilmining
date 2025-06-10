@@ -2,86 +2,52 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blog | BrasilInvesting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - BrasilInvesting</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .blog-container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 30px;
-      background-color: #f9f9f9;
-      border-radius: 12px;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .blog-post {
-      margin-bottom: 40px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 20px;
-    }
-
-    .blog-post h3 {
-      color: #002776;
-    }
-
-    .blog-post p {
-      line-height: 1.6;
-      color: #333;
-    }
-
-    .blog-post a {
-      color: #002776;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #002776;
-      color: #fff;
-      margin-top: 40px;
-    }
-  </style>
 </head>
 <body>
-  <header class="header">
-    <div class="logo">BrasilInvesting</div>
-    <nav class="nav">
-      <a href="index.html">Início</a>
-      <a href="planos.html">Planos</a>
-      <a href="calculadora.html">Calculadora</a>
-      <a href="contratos.html">Contratos</a>
-      <a href="contato.html">Contato</a>
-      <a href="blog.html" class="ativo">Blog</a>
-      <a href="login.html">Login</a>
+  <header>
+    <nav class="navbar">
+      <div class="logo">BrasilInvesting</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="planos.html">Planos</a></li>
+        <li><a href="calculadora.html">Calculadora</a></li>
+        <li><a href="contratos.html">Contratos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
     </nav>
   </header>
 
-  <div class="blog-container">
-    <h2 style="color:#002776;">Últimas notícias e atualizações</h2>
+  <main class="container">
+    <h1>Últimas Notícias e Dicas de Investimento</h1>
 
-    <div class="blog-post">
-      <h3>Por que investir em renda fixa é uma das opções mais seguras?</h3>
-      <p>A renda fixa é ideal para quem busca segurança, previsibilidade e rendimento estável. Entenda como funciona e por que a BrasilInvesting se destaca nesse setor.</p>
-      <a href="#">Leia mais</a>
-    </div>
+    <section class="blog-posts">
+      <article class="post">
+        <h2>BrasilInvesting: Entenda Como Funciona Nosso Modelo</h2>
+        <p>Saiba como nossos contratos funcionam, os rendimentos mensais e o modelo de cancelamento automático após 24 meses.</p>
+        <a href="#">Leia mais</a>
+      </article>
 
-    <div class="blog-post">
-      <h3>BrasilInvesting supera 5% ao mês com parceiros internacionais de peso</h3>
-      <p>Com parcerias como Apple, Google e Tesla, nossos clientes têm acesso a estratégias de investimento diversificadas e lucrativas.</p>
-      <a href="#">Leia mais</a>
-    </div>
+      <article class="post">
+        <h2>Por que investir em renda fixa com a BrasilInvesting?</h2>
+        <p>Descubra as vantagens de um investimento seguro com retorno de 5% ao mês e parceria com grandes empresas.</p>
+        <a href="#">Leia mais</a>
+      </article>
 
-    <div class="blog-post">
-      <h3>Entenda nosso modelo de contrato e como funciona o saque após 45 dias</h3>
-      <p>Veja como funciona o fluxo de rendimento, a flexibilidade nos saques e o encerramento automático após 24 meses de contrato.</p>
-      <a href="#">Leia mais</a>
-    </div>
-  </div>
+      <article class="post">
+        <h2>Bitcoin, ouro e renda fixa: onde investir em 2025?</h2>
+        <p>Analisamos o cenário econômico e as melhores oportunidades para multiplicar seu patrimônio com segurança.</p>
+        <a href="#">Leia mais</a>
+      </article>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 BrasilInvesting. Todos os direitos reservados.
+    <p>&copy; 2025 BrasilInvesting. Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>
