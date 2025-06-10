@@ -3,77 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blog - BrasilMining</title>
+  <title>Blog | BrasilInvesting</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      background-color: #0e0e0e;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #002776;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      color: #ecc440;
-    }
-
-    .container {
-      max-width: 900px;
+    .blog-container {
+      max-width: 1000px;
       margin: 40px auto;
-      padding: 20px;
+      padding: 30px;
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    .post {
-      background-color: #1a1a1a;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
+    .blog-post {
+      margin-bottom: 40px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
     }
 
-    .post h2 {
-      color: #ecc440;
+    .blog-post h3 {
+      color: #002776;
     }
 
-    .post p {
+    .blog-post p {
       line-height: 1.6;
+      color: #333;
+    }
+
+    .blog-post a {
+      color: #002776;
+      font-weight: bold;
     }
 
     footer {
       text-align: center;
       padding: 20px;
       background-color: #002776;
-      color: #ccc;
+      color: #fff;
       margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Blog BrasilMining</h1>
+  <header class="header">
+    <div class="logo">BrasilInvesting</div>
+    <nav class="nav">
+      <a href="index.html">Início</a>
+      <a href="planos.html">Planos</a>
+      <a href="calculadora.html">Calculadora</a>
+      <a href="contratos.html">Contratos</a>
+      <a href="contato.html">Contato</a>
+      <a href="blog.html" class="ativo">Blog</a>
+      <a href="login.html">Login</a>
+    </nav>
   </header>
 
-  <div class="container">
-    <div class="post">
-      <h2>Como funciona a mineração de criptomoedas?</h2>
-      <p>A mineração é o processo de validação de transações e segurança da rede blockchain. Aqui na BrasilMining, você investe e recebe lucros com base no desempenho da mineração profissional.</p>
+  <div class="blog-container">
+    <h2 style="color:#002776;">Últimas notícias e atualizações</h2>
+
+    <div class="blog-post">
+      <h3>Por que investir em renda fixa é uma das opções mais seguras?</h3>
+      <p>A renda fixa é ideal para quem busca segurança, previsibilidade e rendimento estável. Entenda como funciona e por que a BrasilInvesting se destaca nesse setor.</p>
+      <a href="#">Leia mais</a>
     </div>
 
-    <div class="post">
-      <h2>Investimento seguro com retorno mensal</h2>
-      <p>Nossos planos foram pensados para oferecer estabilidade e rentabilidade, com contratos de 12 meses e acompanhamento transparente.</p>
+    <div class="blog-post">
+      <h3>BrasilInvesting supera 5% ao mês com parceiros internacionais de peso</h3>
+      <p>Com parcerias como Apple, Google e Tesla, nossos clientes têm acesso a estratégias de investimento diversificadas e lucrativas.</p>
+      <a href="#">Leia mais</a>
+    </div>
+
+    <div class="blog-post">
+      <h3>Entenda nosso modelo de contrato e como funciona o saque após 45 dias</h3>
+      <p>Veja como funciona o fluxo de rendimento, a flexibilidade nos saques e o encerramento automático após 24 meses de contrato.</p>
+      <a href="#">Leia mais</a>
     </div>
   </div>
 
   <footer>
-    &copy; 2025 BrasilMining. Todos os direitos reservados.
+    &copy; 2025 BrasilInvesting. Todos os direitos reservados.
   </footer>
 </body>
 </html>
