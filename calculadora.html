@@ -1,68 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculadora - BrasilInvesting</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function calcular() {
+      const valor = parseFloat(document.getElementById("valor").value);
+      if (isNaN(valor) || valor < 5000) {
+        alert("O valor mínimo para investimento é R$ 5.000.");
+        return;
+      }
+
+      const rendimentoMensal = valor * 0.05;
+      const rendimentoTotal = rendimentoMensal * 24;
+
+      document.getElementById("resultado").innerHTML = `
+        <p><strong>Investimento:</strong> R$ ${valor.toLocaleString()}</p>
+        <p><strong>Rendimento mensal (5%):</strong> R$ ${rendimentoMensal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+        <p><strong>Total após 24 meses:</strong> R$ ${rendimentoTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+      `;
+    }
+  </script>
 </head>
 <body>
   <header>
-    <div class="logo">BrasilInvesting</div>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="planos.html">Planos</a>
-      <a href="calculadora.html" class="active">Calculadora</a>
-      <a href="contratos.html">Contratos</a>
-      <a href="blog.html">Blog</a>
-      <a href="contato.html">Contato</a>
-      <a href="login.html" class="btn-login">Login</a>
+    <nav class="navbar">
+      <div class="logo">BrasilInvesting</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="planos.html">Planos</a></li>
+        <li><a href="calculadora.html" class="active">Calculadora</a></li>
+        <li><a href="contratos.html">Contratos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main class="calculator-page">
-    <h1>Simule seus rendimentos</h1>
-    <p>Descubra quanto seu investimento pode render com a BrasilInvesting</p>
-
-    <div class="calculator">
-      <label for="valor">Valor do Investimento (mínimo R$ 5.000):</label>
-      <input type="number" id="valor" placeholder="Ex: 10000">
-
-      <label for="meses">Duração do Investimento (em meses):</label>
-      <input type="number" id="meses" value="24" disabled>
-
-      <button onclick="calcular()">Calcular</button>
-
-      <div id="resultado"></div>
-    </div>
+  <main class="container">
+    <section class="calculadora-box">
+      <h1>Simule seu investimento</h1>
+      <p>Calcule seu rendimento com 5% ao mês. O valor mínimo é R$ 5.000.</p>
+      <input type="number" id="valor" placeholder="Digite o valor a investir (mín. R$ 5.000)" />
+      <button onclick="calcular()" class="btn">Calcular</button>
+      <div id="resultado" class="resultado"></div>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 BrasilInvesting. Todos os direitos reservados.</p>
   </footer>
-
-  <script>
-    function calcular() {
-      const valor = parseFloat(document.getElementById('valor').value);
-      const meses = 24;
-      const resultadoDiv = document.getElementById('resultado');
-
-      if (isNaN(valor) || valor < 5000) {
-        resultadoDiv.innerHTML = "<p style='color:red;'>O valor mínimo é R$ 5.000</p>";
-        return;
-      }
-
-      const rendimentoMensal = valor * 0.05;
-      const totalRendimento = rendimentoMensal * meses;
-      const totalFinal = valor + totalRendimento;
-
-      resultadoDiv.innerHTML = `
-        <h3>Resultado da Simulação</h3>
-        <p><strong>Investimento inicial:</strong> R$ ${valor.toFixed(2)}</p>
-        <p><strong>Rendimento mensal (5%):</strong> R$ ${rendimentoMensal.toFixed(2)}</p>
-        <p><strong>Total acumulado após 24 meses:</strong> R$ ${totalFinal.toFixed(2)}</p>
-      `;
-    }
-  </script>
 </body>
 </html>
