@@ -3,99 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login | BrasilInvesting</title>
+  <title>Login - BrasilInvesting</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      background-color: #f0f4f8;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .login-container {
-      max-width: 400px;
-      margin: 80px auto;
-      background-color: #fff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .login-container h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #002776;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-      color: #002776;
-    }
-
-    input[type="text"],
-    input[type="password"] {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
-    }
-
-    .btn-login {
-      background-color: #FFCC00;
-      color: #002776;
-      border: none;
-      width: 100%;
-      padding: 12px;
-      font-weight: bold;
-      font-size: 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn-login:hover {
-      background-color: #e6b800;
-    }
-
-    .link-recuperar {
-      display: block;
-      margin-top: 10px;
-      text-align: center;
-      color: #002776;
-      font-size: 14px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #002776;
-      color: #fff;
-      margin-top: 60px;
-    }
-  </style>
 </head>
 <body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">BrasilInvesting</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="planos.html">Planos</a></li>
+        <li><a href="calculadora.html">Calculadora</a></li>
+        <li><a href="contratos.html">Contratos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="login-container">
-    <h2>Login BrasilInvesting</h2>
-    <form action="backend/login.php" method="POST">
-      <label for="usuario">Usuário</label>
-      <input type="text" id="usuario" name="usuario" required>
+  <main class="container">
+    <section class="form-container">
+      <h1>Login</h1>
+      <form action="backend/login.php" method="POST">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
 
-      <label for="senha">Senha</label>
-      <input type="password" id="senha" name="senha" required>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required />
 
-      <button type="submit" class="btn-login">Entrar</button>
-      <a href="#" class="link-recuperar">Esqueceu sua senha?</a>
-    </form>
-  </div>
+        <button type="submit" class="btn-amarelo">Entrar</button>
+        <p class="form-link">Não tem conta? <a href="registro.html">Registre-se</a></p>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 BrasilInvesting. Todos os direitos reservados.
+    <p>&copy; 2025 BrasilInvesting. Todos os direitos reservados.</p>
   </footer>
-
 </body>
 </html>
