@@ -3,114 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contato | BrasilInvesting</title>
+  <title>Contato - BrasilInvesting</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .contato-container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 30px;
-      background-color: #f9f9f9;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
-      font-family: 'Segoe UI', sans-serif;
-      color: #002776;
-    }
-
-    .contato-container h2 {
-      margin-bottom: 20px;
-      color: #002776;
-    }
-
-    .contato-container label {
-      display: block;
-      margin-top: 15px;
-      font-weight: 600;
-    }
-
-    .contato-container input,
-    .contato-container textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-
-    .contato-container button {
-      background-color: #002776;
-      color: #fff;
-      padding: 12px 24px;
-      margin-top: 20px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .contato-container button:hover {
-      background-color: #FFCC00;
-      color: #002776;
-    }
-
-    .info-contato {
-      margin-top: 30px;
-    }
-
-    .info-contato p {
-      margin: 8px 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #002776;
-      color: #fff;
-      margin-top: 40px;
-    }
-  </style>
 </head>
 <body>
   <header class="header">
-    <div class="logo">BrasilInvesting</div>
-    <nav class="nav">
-      <a href="index.html">Início</a>
-      <a href="planos.html">Planos</a>
-      <a href="calculadora.html">Calculadora</a>
-      <a href="contratos.html">Contratos</a>
-      <a href="contato.html" class="ativo">Contato</a>
-      <a href="blog.html">Blog</a>
-      <a href="login.html">Login</a>
-    </nav>
+    <div class="container">
+      <h1 class="logo">BrasilInvesting</h1>
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="planos.html">Planos</a>
+        <a href="calculadora.html">Calculadora</a>
+        <a href="contratos.html">Contratos</a>
+        <a href="blog.html">Blog</a>
+        <a href="login.html">Login</a>
+        <a href="contato.html" class="active">Contato</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="contato-container">
+  <main class="main-content container">
     <h2>Fale com a BrasilInvesting</h2>
-    <form action="#" method="post">
-      <label for="nome">Nome</label>
-      <input type="text" id="nome" name="nome" required />
+    <p>Se você tiver qualquer dúvida ou precisar de ajuda, entre em contato com a nossa equipe de suporte.</p>
 
-      <label for="email">E-mail</label>
-      <input type="email" id="email" name="email" required />
+    <section class="contato-form">
+      <form action="enviar.php" method="post">
+        <label for="nome">Seu nome:</label>
+        <input type="text" id="nome" name="nome" required />
 
-      <label for="mensagem">Mensagem</label>
-      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <label for="email">Seu e-mail:</label>
+        <input type="email" id="email" name="email" required />
 
-      <button type="submit">Enviar</button>
-    </form>
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-    <div class="info-contato">
-      <p><strong>WhatsApp:</strong> (11) 90000-0000</p>
-      <p><strong>E-mail:</strong> atendimento@brasilinvesting.com</p>
-      <p><strong>Horário de atendimento:</strong> Segunda a Sexta, das 9h às 18h</p>
+        <button type="submit">Enviar mensagem</button>
+      </form>
+    </section>
+
+    <section class="contato-info">
+      <h3>Outros meios de contato</h3>
+      <p><strong>E-mail:</strong> suporte@brasilinvesting.com</p>
+      <p><strong>WhatsApp:</strong> (11) 91234-5678</p>
+      <p>Nosso suporte funciona de segunda a sexta, das 08h às 18h.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 BrasilInvesting. Todos os direitos reservados.</p>
     </div>
-  </div>
-
-  <footer>
-    &copy; 2025 BrasilInvesting. Todos os direitos reservados.
   </footer>
 </body>
 </html>
-
-  
