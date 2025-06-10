@@ -3,111 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contato - BrasilMining</title>
+  <title>Contato | BrasilInvesting</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      background-color: #f4f4f4;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #002776;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      color: #ECC440;
-      margin: 0;
-    }
-
-    .container {
-      max-width: 700px;
+    .contato-container {
+      max-width: 900px;
       margin: 40px auto;
       padding: 30px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    h2 {
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+      font-family: 'Segoe UI', sans-serif;
       color: #002776;
-      text-align: center;
-      margin-bottom: 20px;
     }
 
-    label {
+    .contato-container h2 {
+      margin-bottom: 20px;
+      color: #002776;
+    }
+
+    .contato-container label {
       display: block;
-      margin-bottom: 5px;
-      color: #333;
+      margin-top: 15px;
+      font-weight: 600;
     }
 
-    input, textarea {
+    .contato-container input,
+    .contato-container textarea {
       width: 100%;
-      padding: 12px;
+      padding: 10px;
+      margin-top: 5px;
       border: 1px solid #ccc;
-      border-radius: 6px;
-      margin-bottom: 20px;
-      font-size: 1rem;
+      border-radius: 8px;
     }
 
-    button {
+    .contato-container button {
       background-color: #002776;
-      color: #ECC440;
+      color: #fff;
+      padding: 12px 24px;
+      margin-top: 20px;
       border: none;
-      padding: 12px 25px;
-      font-size: 1rem;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
-      transition: 0.3s;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
 
-    button:hover {
-      background-color: #001c55;
+    .contato-container button:hover {
+      background-color: #FFCC00;
+      color: #002776;
+    }
+
+    .info-contato {
+      margin-top: 30px;
+    }
+
+    .info-contato p {
+      margin: 8px 0;
     }
 
     footer {
-      background-color: #002776;
-      color: #fff;
       text-align: center;
       padding: 20px;
-      margin-top: 50px;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        margin: 20px;
-        padding: 20px;
-      }
+      background-color: #002776;
+      color: #fff;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>BrasilMining</h1>
+  <header class="header">
+    <div class="logo">BrasilInvesting</div>
+    <nav class="nav">
+      <a href="index.html">Início</a>
+      <a href="planos.html">Planos</a>
+      <a href="calculadora.html">Calculadora</a>
+      <a href="contratos.html">Contratos</a>
+      <a href="contato.html" class="ativo">Contato</a>
+      <a href="blog.html">Blog</a>
+      <a href="login.html">Login</a>
+    </nav>
   </header>
 
-  <div class="container">
-    <h2>Entre em Contato</h2>
-    <form action="enviar_contato.php" method="post">
-      <label for="nome">Seu nome</label>
+  <div class="contato-container">
+    <h2>Fale com a BrasilInvesting</h2>
+    <form action="#" method="post">
+      <label for="nome">Nome</label>
       <input type="text" id="nome" name="nome" required />
 
-      <label for="email">Seu e-mail</label>
+      <label for="email">E-mail</label>
       <input type="email" id="email" name="email" required />
 
       <label for="mensagem">Mensagem</label>
-      <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
       <button type="submit">Enviar</button>
     </form>
+
+    <div class="info-contato">
+      <p><strong>WhatsApp:</strong> (11) 90000-0000</p>
+      <p><strong>E-mail:</strong> atendimento@brasilinvesting.com</p>
+      <p><strong>Horário de atendimento:</strong> Segunda a Sexta, das 9h às 18h</p>
+    </div>
   </div>
 
   <footer>
-    &copy; 2025 BrasilMining. Todos os direitos reservados.
+    &copy; 2025 BrasilInvesting. Todos os direitos reservados.
   </footer>
 </body>
 </html>
+
+  
