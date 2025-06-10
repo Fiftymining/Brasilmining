@@ -3,102 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login - BrasilMining</title>
+  <title>Login | BrasilInvesting</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      background-color: #002776;
+      background-color: #f0f4f8;
       font-family: 'Segoe UI', sans-serif;
-      color: #fff;
-      margin: 0;
-      padding: 0;
     }
 
     .login-container {
       max-width: 400px;
-      margin: 100px auto;
-      padding: 30px;
-      background-color: #ffffff10;
+      margin: 80px auto;
+      background-color: #fff;
+      padding: 40px;
       border-radius: 12px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    h2 {
+    .login-container h2 {
       text-align: center;
-      color: #FFCC00;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
+      color: #002776;
     }
 
     label {
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       font-weight: 600;
+      color: #002776;
     }
 
     input[type="text"],
     input[type="password"] {
       width: 100%;
       padding: 12px;
-      margin-bottom: 18px;
-      border: none;
-      border-radius: 8px;
-      background-color: #e0e0e0;
-      color: #000;
-      font-size: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
     }
 
-    input[type="text"]:focus,
-    input[type="password"]:focus {
-      outline: 2px solid #FFCC00;
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
+    .btn-login {
       background-color: #FFCC00;
       color: #002776;
       border: none;
-      border-radius: 8px;
+      width: 100%;
+      padding: 12px;
       font-weight: bold;
       font-size: 16px;
+      border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
 
-    button:hover {
+    .btn-login:hover {
       background-color: #e6b800;
     }
 
-    .footer {
+    .link-recuperar {
+      display: block;
+      margin-top: 10px;
       text-align: center;
-      margin-top: 20px;
+      color: #002776;
       font-size: 14px;
-      color: #ccc;
     }
 
-    @media (max-width: 480px) {
-      .login-container {
-        margin: 50px 20px;
-      }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #002776;
+      color: #fff;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
+
   <div class="login-container">
-    <h2>Login BrasilMining</h2>
-    <form action="verificar_login.php" method="POST">
+    <h2>Login BrasilInvesting</h2>
+    <form action="backend/login.php" method="POST">
       <label for="usuario">Usuário</label>
-      <input type="text" id="usuario" name="usuario" required />
+      <input type="text" id="usuario" name="usuario" required>
 
       <label for="senha">Senha</label>
-      <input type="password" id="senha" name="senha" required />
+      <input type="password" id="senha" name="senha" required>
 
-      <button type="submit">Entrar</button>
+      <button type="submit" class="btn-login">Entrar</button>
+      <a href="#" class="link-recuperar">Esqueceu sua senha?</a>
     </form>
-    <div class="footer">
-      © 2025 BrasilMining. Todos os direitos reservados.
-    </div>
   </div>
+
+  <footer>
+    &copy; 2025 BrasilInvesting. Todos os direitos reservados.
+  </footer>
+
 </body>
 </html>
