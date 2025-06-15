@@ -5,50 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Blog - BrasilInvesting</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .blog-section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .blog-post {
+      background-color: #f5f5f5;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .blog-post h2 {
+      color: #002776;
+      margin-bottom: 10px;
+    }
+
+    .blog-post p {
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .blog-post small {
+      display: block;
+      margin-top: 15px;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <h1>BrasilInvesting</h1>
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="planos.html">Planos</a>
-        <a href="calculadora.html">Calculadora</a>
-        <a href="contratos.html">Contratos</a>
-        <a href="contato.html">Contato</a>
-        <a href="login.html">Login</a>
-      </nav>
-    </div>
+  <header>
+    <h1>BrasilInvesting</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="planos.html">Planos</a>
+      <a href="calculadora.html">Calculadora</a>
+      <a href="contratos.html">Contratos</a>
+      <a href="contato.html">Contato</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="login.html">Login</a>
+    </nav>
   </header>
 
-  <main class="main">
-    <div class="container">
-      <h2 class="titulo-amarelo">Últimas notícias e conteúdos sobre investimentos</h2>
+  <div class="blog-section">
+    <h2 style="color:#002776; text-align:center;">Últimas do Blog</h2>
 
-      <section class="blog-post">
-        <h3>📈 BrasilInvesting supera 5% ao mês com segurança e transparência</h3>
-        <p>
-          A BrasilInvesting se consolida como líder em investimentos de renda fixa, oferecendo rentabilidades superiores a 5% ao mês com contrato fixo de 24 meses.
-        </p>
-      </section>
-
-      <section class="blog-post">
-        <h3>🤝 Parcerias com gigantes do mercado</h3>
-        <p>
-          Investimos com grandes nomes como Banco do Brasil, Petrobras, Microsoft, Tesla e Bitcoin. Segurança e rentabilidade aliadas à inovação.
-        </p>
-      </section>
-
-      <section class="blog-post">
-        <h3>🔒 Segurança no seu investimento</h3>
-        <p>
-          Contratos claros, suporte via WhatsApp e e-mail, e saques liberados após 45 dias. Nosso compromisso é com sua confiança e crescimento.
-        </p>
-      </section>
+    <div class="blog-post">
+      <h2>Investimentos Inteligentes em 2025</h2>
+      <p>Com a taxa Selic em constante oscilação, os investidores buscam alternativas que ofereçam segurança e boa rentabilidade. A BrasilInvesting se destaca com contratos de renda fixa que entregam 5% ao mês com solidez e parcerias de peso.</p>
+      <small>Publicado em 15 de junho de 2025</small>
     </div>
-  </main>
 
-  <footer class="footer">
+    <div class="blog-post">
+      <h2>Como funciona nosso contrato de 24 meses</h2>
+      <p>Os contratos da BrasilInvesting garantem estabilidade e previsibilidade. A partir de R$ 5.000, você investe por 24 meses com saques liberados a partir do 45º dia. Lucros mensais ou acumulados: você escolhe.</p>
+      <small>Publicado em 10 de junho de 2025</small>
+    </div>
+
+    <div class="blog-post">
+      <h2>Parcerias nacionais e internacionais fortalecem seus rendimentos</h2>
+      <p>Contamos com o apoio de empresas como Banco do Brasil, Petrobrás, Itaú, Microsoft e até criptomoedas como Bitcoin e Ethereum. Isso garante um portfólio diversificado e rentável para nossos clientes.</p>
+      <small>Publicado em 05 de junho de 2025</small>
+    </div>
+  </div>
+
+  <footer>
     <p>&copy; 2025 BrasilInvesting. Todos os direitos reservados.</p>
   </footer>
 </body>
