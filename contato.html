@@ -5,97 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contato - BrasilInvesting</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      background-color: #002776;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #001b4d;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      color: #FFCC00;
-      margin: 0;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #00338c;
-      border-radius: 10px;
-    }
-
-    h2 {
-      color: #FFCC00;
-      margin-bottom: 20px;
-    }
-
-    label {
-      display: block;
-      margin-top: 15px;
-      color: #fff;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: none;
-      border-radius: 5px;
-    }
-
-    input[type="submit"] {
-      background-color: #FFCC00;
-      color: #002776;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #e6b800;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #001b4d;
-      color: #ccc;
-      margin-top: 40px;
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <h1>BrasilInvesting</h1>
+  <header class="header">
+    <div class="container">
+      <h1>BrasilInvesting</h1>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="planos.html">Planos</a>
+        <a href="calculadora.html">Calculadora</a>
+        <a href="contratos.html">Contratos</a>
+        <a href="blog.html">Blog</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="container">
-    <h2>Entre em Contato</h2>
-    <form action="mailto:contato@brasilinvesting.com" method="post" enctype="text/plain">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
+  <main class="main">
+    <div class="container">
+      <h2 class="titulo-amarelo">Fale com a BrasilInvesting</h2>
+      <p>Tem dúvidas? Preencha o formulário abaixo ou entre em contato com nosso suporte via e-mail ou WhatsApp.</p>
 
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required>
+      <form action="#" method="post" class="formulario">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
 
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
 
-      <input type="submit" value="Enviar">
-    </form>
-  </div>
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-  <footer>
-    &copy; 2025 BrasilInvesting. Todos os direitos reservados.
+        <button type="submit" class="botao">Enviar</button>
+      </form>
+
+      <div class="contato-info">
+        <p><strong>WhatsApp:</strong> (11) 99999-9999</p>
+        <p><strong>E-mail:</strong> contato@brasilinvesting.com</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 BrasilInvesting. Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>
