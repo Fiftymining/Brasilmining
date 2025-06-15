@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login - BrasilInvesting</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -16,14 +16,13 @@
       <a href="contratos.html">Contratos</a>
       <a href="contato.html">Contato</a>
       <a href="blog.html">Blog</a>
-      <a href="login.html" class="ativo">Login</a>
     </nav>
   </header>
 
-  <main class="conteudo login-formulario">
-    <h2>Acesse sua conta</h2>
-    <form action="login.php" method="post">
-      <label for="email">E-mail:</label>
+  <main class="container login-container">
+    <h2>Área do Investidor</h2>
+    <form class="login-form" action="#" method="POST">
+      <label for="email">E-mail cadastrado:</label>
       <input type="email" id="email" name="email" required />
 
       <label for="senha">Senha:</label>
@@ -31,11 +30,12 @@
 
       <button type="submit">Entrar</button>
     </form>
-    <p>Não tem conta? <a href="#">Cadastre-se</a></p>
+    <p class="small-text">Esqueceu sua senha? <a href="#">Recuperar acesso</a></p>
+    <p class="small-text">Ainda não é cliente? <a href="#">Criar conta</a></p>
   </main>
 
   <footer>
-    &copy; 2025 BrasilInvesting. Todos os direitos reservados.
+    <p>&copy; 2025 BrasilInvesting. Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>
