@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contato - BrasilInvesting</title>
+  <title>Contato | BrasilInvesting</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="header">
     <div class="container">
-      <h1>BrasilInvesting</h1>
-      <nav>
+      <h1 class="logo">BrasilInvesting</h1>
+      <nav class="menu">
         <a href="index.html">Início</a>
         <a href="planos.html">Planos</a>
         <a href="calculadora.html">Calculadora</a>
@@ -21,33 +21,36 @@
     </div>
   </header>
 
-  <main class="main">
-    <div class="container">
-      <h2 class="titulo-amarelo">Fale com a BrasilInvesting</h2>
-      <p>Tem dúvidas? Preencha o formulário abaixo ou entre em contato com nosso suporte via e-mail ou WhatsApp.</p>
+  <main class="container">
+    <section class="contato">
+      <h2>Fale com a BrasilInvesting</h2>
+      <p>Entre em contato conosco através do formulário abaixo ou pelos nossos canais oficiais.</p>
 
-      <form action="#" method="post" class="formulario">
+      <form class="formulario">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required />
+        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
 
         <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required />
 
         <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
 
         <button type="submit" class="botao">Enviar</button>
       </form>
 
-      <div class="contato-info">
+      <div class="info-contato">
         <p><strong>WhatsApp:</strong> (11) 99999-9999</p>
-        <p><strong>E-mail:</strong> contato@brasilinvesting.com</p>
+        <p><strong>E-mail:</strong> suporte@brasilinvesting.com</p>
+        <p><strong>Atendimento:</strong> Segunda a Sexta, das 9h às 18h</p>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2025 BrasilInvesting. Todos os direitos reservados.</p>
+    <div class="container">
+      &copy; 2025 BrasilInvesting. Todos os direitos reservados.
+    </div>
   </footer>
 </body>
 </html>
