@@ -3,56 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Calculadora | BrasilInvesting</title>
+  <title>Calculadora de Investimentos - BrasilInvesting</title>
   <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topo">
+    <h1>BrasilInvesting</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="planos.html">Planos</a>
+      <a href="contratos.html">Contratos</a>
+      <a href="blog.html">Blog</a>
+      <a href="contato.html">Contato</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="calculadora">
+      <h2>Simule seu Investimento</h2>
+      <p>Descubra quanto você pode lucrar com a BrasilInvesting.</p>
+
+      <div class="formulario">
+        <label for="valor">Valor do Investimento (mínimo R$ 5.000):</label>
+        <input type="number" id="valor" min="5000" placeholder="Digite o valor em reais" required />
+
+        <button onclick="calcular()">Calcular</button>
+
+        <div id="resultado" class="resultado"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BrasilInvesting. Todos os direitos reservados.</p>
+  </footer>
+
   <script>
     function calcular() {
       const valor = parseFloat(document.getElementById('valor').value);
-      const meses = 24;
-      const rendimentoMensal = 0.05;
+      const resultado = document.getElementById('resultado');
+      
       if (isNaN(valor) || valor < 5000) {
-        alert("Insira um valor mínimo de R$ 5.000 para simular.");
+        resultado.innerHTML = '<p style="color:red;">Insira um valor válido (mínimo R$ 5.000).</p>';
         return;
       }
-      const total = valor * Math.pow(1 + rendimentoMensal, meses);
-      document.getElementById('resultado').innerText =
-        `Em 24 meses, seu investimento pode render até R$ ${total.toFixed(2).replace('.', ',')}`;
+
+      const rendimentoMensal = valor * 0.05;
+      const rendimentoTotal = rendimentoMensal * 24;
+      const valorFinal = valor + rendimentoTotal;
+
+      resultado.innerHTML = `
+        <h3>Resultados da Simulação</h3>
+        <p><strong>Rendimento mensal (5%):</strong> R$ ${rendimentoMensal.toFixed(2)}</p>
+        <p><strong>Rendimento em 24 meses:</strong> R$ ${rendimentoTotal.toFixed(2)}</p>
+        <p><strong>Valor total ao final:</strong> R$ ${valorFinal.toFixed(2)}</p>
+      `;
     }
   </script>
-</head>
-<body>
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">BrasilInvesting</h1>
-      <nav class="menu">
-        <a href="index.html">Início</a>
-        <a href="planos.html">Planos</a>
-        <a href="calculadora.html" class="ativo">Calculadora</a>
-        <a href="contratos.html">Contratos</a>
-        <a href="blog.html">Blog</a>
-        <a href="login.html">Login</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container calculadora">
-    <h2>Simule seu Investimento</h2>
-    <p>Descubra quanto seu dinheiro pode render com a BrasilInvesting.</p>
-
-    <div class="formulario">
-      <label for="valor">Valor a investir (mínimo R$ 5.000):</label>
-      <input type="number" id="valor" placeholder="Digite o valor" required />
-
-      <button class="botao" onclick="calcular()">Calcular</button>
-    </div>
-
-    <div id="resultado" class="resultado"></div>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      &copy; 2025 BrasilInvesting. Todos os direitos reservados.
-    </div>
-  </footer>
 </body>
 </html>
