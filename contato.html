@@ -16,8 +16,8 @@
 
     header {
       background-color: #001a4d;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
     }
 
     header h1 {
@@ -27,52 +27,37 @@
 
     .container {
       max-width: 600px;
-      margin: 40px auto;
-      padding: 30px;
+      margin: 50px auto;
       background-color: #003399;
+      padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
 
     h2 {
-      color: #FFCC00;
       text-align: center;
-      margin-bottom: 20px;
+      color: #FFCC00;
+      margin-bottom: 25px;
     }
 
-    label {
-      display: block;
-      margin-top: 15px;
-      color: #fff;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 6px;
-      border: none;
-      font-size: 1rem;
-    }
-
+    input,
     textarea {
-      height: 120px;
-      resize: none;
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
     }
 
-    button {
+    input[type="submit"] {
       background-color: #FFCC00;
       color: #002776;
-      border: none;
-      padding: 12px 20px;
-      margin-top: 20px;
-      font-size: 1rem;
-      border-radius: 8px;
+      font-weight: bold;
       cursor: pointer;
-      width: 100%;
     }
 
-    button:hover {
+    input[type="submit"]:hover {
       background-color: #e6b800;
     }
 
@@ -93,18 +78,11 @@
 
   <div class="container">
     <h2>Fale Conosco</h2>
-
-    <form action="#" method="post">
-      <label for="nome">Nome completo</label>
-      <input type="text" id="nome" name="nome" required />
-
-      <label for="email">E-mail</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="mensagem">Mensagem</label>
-      <textarea id="mensagem" name="mensagem" required></textarea>
-
-      <button type="submit">Enviar mensagem</button>
+    <form>
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu e-mail" required />
+      <textarea rows="5" placeholder="Sua mensagem..." required></textarea>
+      <input type="submit" value="Enviar" />
     </form>
   </div>
 
