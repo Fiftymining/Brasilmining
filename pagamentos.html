@@ -3,50 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pagamentos - FiftyMining</title>
+  <title>Simulação de Retorno - BrasilInvesting</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #f0f0f0;
+      color: #002776;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #002776;
+      color: #FFCC00;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .destaque {
+      font-weight: bold;
+      color: #002776;
+    }
+
+    .botao {
+      background-color: #002776;
+      color: #FFCC00;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .botao:hover {
+      background-color: #001b4d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #002776;
+      color: #fff;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>FiftyMining</h1>
-    <nav>
-      <ul>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="contratos.html">Contratos</a></li>
-        <li><a href="pagamentos.html" class="active">Pagamentos</a></li>
-        <li><a href="login.html">Sair</a></li>
-      </ul>
-    </nav>
+    <h1>BrasilInvesting</h1>
   </header>
 
-  <main>
-    <h2>Escolha o método de pagamento</h2>
-    <section class="pagamentos">
-      <div class="metodo-pagamento">
-        <h3>PIX</h3>
-        <p>Chave: <strong>contato@fiftymining.com</strong></p>
-        <p>Banco: Nubank</p>
-        <p>Após o pagamento, envie o comprovante por e-mail ou área do usuário.</p>
-      </div>
+  <div class="container">
+    <h2>Simulação do Investimento</h2>
+    <p id="valorInvestido"></p>
+    <p id="lucroMensal"></p>
+    <p id="lucroTotal"></p>
+    <p class="destaque">Você poderá sacar após 45 dias ou deixar seu saldo acumulando por 24 meses.</p>
 
-      <div class="metodo-pagamento">
-        <h3>Criptomoeda</h3>
-        <p>Carteira Bitcoin:</p>
-        <code>bc1qexamplebitcoinwalletxxxyyyzz</code>
-        <p>Ou Ethereum:</p>
-        <code>0xexampleethereumwallet123456</code>
-      </div>
-
-      <div class="metodo-pagamento">
-        <h3>Boleto Bancário</h3>
-        <p>Emissão disponível após cadastro do plano.</p>
-        <button disabled>Gerar Boleto</button>
-      </div>
-    </section>
-  </main>
+    <a href="contato.html">
+      <button class="botao">Falar com um Gerente</button>
+    </a>
+  </div>
 
   <footer>
-    <p>&copy; 2025 FiftyMining. Todos os direitos reservados.</p>
+    &copy; 2025 BrasilInvesting. Todos os direitos reservados.
   </footer>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const valor = parseFloat(urlParams.get('valor'));
+
+    if (!isNaN(valor) && valor >= 5000) {
+      const lucroMensal = valor * 0.05;
+      const lucroTotal = lucroMensal * 24;
+
+      document.getElementById("valorInvestido").textContent = "Valor investido: R$ " + valor.toLocaleString('pt-BR', {minimumFractionDigits: 2});
+      document.getElementById("lucroMensal").textContent = "Rendimento mensal estimado (5%): R$ " + lucroMensal.toLocaleString('pt-BR', {minimumFractionDigits: 2});
+      document.getElementById("lucroTotal").textContent = "Retorno total ao final de 24 meses: R$ " + lucroTotal.toLocaleString('pt-BR', {minimumFractionDigits: 2});
+    } else {
+      document.querySelector(".container").innerHTML = "<h2>Erro</h2><p>Valor inválido. O investimento mínimo é de R$ 5.000.</p>";
+    }
+  </script>
 </body>
 </html>
