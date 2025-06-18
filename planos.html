@@ -7,80 +7,72 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      background-color: #f0f0f0;
-      color: #002776;
+      background-color: #0e0e0e;
+      color: #fff;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
     }
-
     header {
       background-color: #002776;
-      color: #FFCC00;
       padding: 20px;
       text-align: center;
     }
-
     header h1 {
+      color: #FFCC00;
       margin: 0;
     }
-
-    .container {
-      max-width: 800px;
+    main {
+      max-width: 900px;
       margin: 40px auto;
-      background-color: white;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
     }
-
     h2 {
-      color: #002776;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    form {
-      margin-top: 30px;
-    }
-
-    label {
-      font-weight: bold;
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    input[type="number"] {
-      width: 100%;
-      padding: 12px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      margin-bottom: 20px;
-    }
-
-    button {
-      background-color: #002776;
       color: #FFCC00;
-      padding: 12px 25px;
-      border: none;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .card {
+      background-color: #1a1a1a;
+      border: 2px solid #FFCC00;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+    }
+    label, input {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    input[type="number"] {
+      padding: 10px;
       font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+    .botao-pagar {
+      background-color: #FFCC00;
+      color: #000;
+      padding: 12px 20px;
+      font-weight: bold;
+      text-align: center;
+      display: inline-block;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
       cursor: pointer;
-      border-radius: 6px;
+      transition: 0.3s;
     }
-
-    button:hover {
-      background-color: #001d5e;
+    .botao-pagar:hover {
+      background-color: #e6b800;
     }
-
     footer {
       text-align: center;
       padding: 20px;
       background-color: #002776;
-      color: #fff;
+      color: #ccc;
       margin-top: 40px;
     }
   </style>
@@ -90,20 +82,34 @@
     <h1>BrasilInvesting</h1>
   </header>
 
-  <div class="container">
+  <main>
     <h2>Plano de Investimento Flexível</h2>
-    <p>Invista com liberdade! O valor mínimo para começar é de <strong>R$ 5.000</strong>. Acima disso, você decide quanto deseja aplicar.</p>
-    <p>Com rendimento mensal de até <strong>5%</strong>, seu dinheiro trabalha para você com segurança, transparência e parceria com grandes instituições.</p>
+    <div class="card">
+      <p>O valor mínimo de investimento é de <strong>R$ 5.000</strong>. Você pode escolher quanto deseja investir acima desse valor.</p>
+      
+      <label for="valorInvestido">Digite o valor desejado:</label>
+      <input type="number" id="valorInvestido" placeholder="Ex: 5000" min="5000" required />
 
-    <form action="pagamento.html" method="GET">
-      <label for="valor">Informe o valor que deseja investir:</label>
-      <input type="number" id="valor" name="valor" min="5000" required placeholder="Ex: 10000" />
-      <button type="submit">Investir agora</button>
-    </form>
-  </div>
+      <button class="botao-pagar" onclick="gerarLink()">Pagar com PagSeguro (PIX)</button>
+    </div>
+  </main>
 
   <footer>
     &copy; 2025 BrasilInvesting. Todos os direitos reservados.
   </footer>
+
+  <script>
+    function gerarLink() {
+      const valor = parseFloat(document.getElementById('valorInvestido').value);
+      if (isNaN(valor) || valor < 5000) {
+        alert("Por favor, insira um valor mínimo de R$ 5.000.");
+        return;
+      }
+
+      // Simulação de link com valor dinâmico (você precisará usar a API PagSeguro real no backend para isso)
+      const linkBase = "https://pag.ae/7_JTKWo2P"; // Link fictício fixo para exemplo
+      window.open(linkBase, '_blank');
+    }
+  </script>
 </body>
 </html>
