@@ -7,17 +7,17 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
+      font-family: 'Segoe UI', sans-serif;
       background-color: #002776;
       color: #fff;
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
     }
 
     header {
       background-color: #001a4d;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
     }
 
     header h1 {
@@ -26,12 +26,12 @@
     }
 
     .container {
-      max-width: 600px;
+      max-width: 700px;
       margin: 40px auto;
-      padding: 30px;
       background-color: #003399;
+      padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
 
     h2 {
@@ -39,19 +39,30 @@
       margin-bottom: 20px;
     }
 
-    p {
-      line-height: 1.6;
-      margin-bottom: 20px;
+    label {
+      display: block;
+      margin-top: 15px;
     }
 
-    .contact-info {
-      background-color: #002776;
-      padding: 20px;
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
       border-radius: 8px;
+      margin-top: 5px;
     }
 
-    .contact-info p {
-      margin: 10px 0;
+    input[type="submit"] {
+      background-color: #FFCC00;
+      color: #002776;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 20px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #e6b800;
     }
 
     footer {
@@ -70,14 +81,19 @@
   </header>
 
   <div class="container">
-    <h2>Entre em Contato</h2>
-    <p>Nosso time está pronto para te atender com agilidade e atenção. Use os canais abaixo para falar com a gente.</p>
+    <h2>Fale conosco</h2>
+    <form action="mailto:contato@brasilinvesting.com" method="post" enctype="text/plain">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
 
-    <div class="contact-info">
-      <p><strong>E-mail:</strong> contato@brasilinvesting.com</p>
-      <p><strong>WhatsApp:</strong> (11) 99999-9999</p>
-      <p><strong>Atendimento:</strong> Segunda à sexta, das 9h às 18h</p>
-    </div>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+      <input type="submit" value="Enviar mensagem" />
+    </form>
   </div>
 
   <footer>
