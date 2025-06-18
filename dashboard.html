@@ -1,45 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard - BrasilMining</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - BrasilInvesting</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #002776;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #001a4d;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #FFCC00;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #003399;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .card h2 {
+      color: #FFCC00;
+    }
+
+    .card p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    footer {
+      background-color: #001a4d;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>BrasilMining</h1>
+    <h1>Bem-vindo ao seu Painel</h1>
   </header>
 
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="planos.html">Planos</a>
-    <a href="calculadora.html">Calculadora</a>
-    <a href="contratos.html">Contratos</a>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="login.html">Sair</a>
-  </nav>
-
   <div class="container">
-    <h2>Bem-vindo(a) ao seu Painel</h2>
-    <p>Acompanhe o desempenho do seu investimento em tempo real.</p>
+    <div class="card">
+      <h2>Resumo do Investimento</h2>
+      <p><strong>Plano:</strong> Ouro</p>
+      <p><strong>Valor investido:</strong> R$ 10.000</p>
+      <p><strong>Rendimento mensal:</strong> R$ 500,00</p>
+      <p><strong>Lucro acumulado:</strong> R$ 1.000,00</p>
+      <p><strong>Saldo disponível para saque:</strong> R$ 1.000,00</p>
+    </div>
 
-    <h3>Seu Plano</h3>
-    <p><strong>Nome do Plano:</strong> Ouro</p>
-    <p><strong>Valor Investido:</strong> R$ 10.000,00</p>
-    <p><strong>Início:</strong> 06/06/2025</p>
-    <p><strong>Encerramento:</strong> 06/06/2026</p>
-
-    <h3>Rendimento</h3>
-    <p><strong>Lucro diário:</strong> R$ 14,16</p>
-    <p><strong>Total acumulado:</strong> R$ 1.418,00</p>
-    <p><strong>Status:</strong> Ativo</p>
-
-    <button class="btn">Solicitar Saque</button>
+    <div class="card">
+      <h2>Contrato</h2>
+      <p><strong>Início:</strong> 01/06/2025</p>
+      <p><strong>Encerramento:</strong> 01/06/2027</p>
+      <p><strong>Status:</strong> Ativo</p>
+    </div>
   </div>
 
   <footer>
-    &copy; 2025 BrasilMining. Todos os direitos reservados.
+    &copy; 2025 BrasilInvesting. Todos os direitos reservados.
   </footer>
+
 </body>
 </html>
