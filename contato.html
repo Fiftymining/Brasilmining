@@ -7,17 +7,17 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       background-color: #002776;
       color: #fff;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
     }
 
     header {
       background-color: #001a4d;
-      text-align: center;
       padding: 20px;
+      text-align: center;
     }
 
     header h1 {
@@ -26,42 +26,53 @@
     }
 
     .container {
-      max-width: 700px;
+      max-width: 600px;
       margin: 40px auto;
-      background-color: #003399;
       padding: 30px;
+      background-color: #003399;
       border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      box-shadow: 0 0 12px rgba(0,0,0,0.3);
     }
 
     h2 {
       color: #FFCC00;
+      text-align: center;
       margin-bottom: 20px;
     }
 
     label {
       display: block;
       margin-top: 15px;
+      color: #fff;
     }
 
     input, textarea {
       width: 100%;
       padding: 10px;
-      border: none;
-      border-radius: 8px;
       margin-top: 5px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
     }
 
-    input[type="submit"] {
+    textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    button {
       background-color: #FFCC00;
       color: #002776;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s;
+      border: none;
+      padding: 12px 20px;
       margin-top: 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
     }
 
-    input[type="submit"]:hover {
+    button:hover {
       background-color: #e6b800;
     }
 
@@ -81,18 +92,19 @@
   </header>
 
   <div class="container">
-    <h2>Fale conosco</h2>
-    <form action="mailto:contato@brasilinvesting.com" method="post" enctype="text/plain">
-      <label for="nome">Nome:</label>
+    <h2>Fale Conosco</h2>
+
+    <form action="#" method="post">
+      <label for="nome">Nome completo</label>
       <input type="text" id="nome" name="nome" required />
 
-      <label for="email">E-mail:</label>
+      <label for="email">E-mail</label>
       <input type="email" id="email" name="email" required />
 
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" required></textarea>
 
-      <input type="submit" value="Enviar mensagem" />
+      <button type="submit">Enviar mensagem</button>
     </form>
   </div>
 
