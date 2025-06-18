@@ -3,63 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Calculadora de Investimentos - BrasilInvesting</title>
+  <title>Calculadora de Investimento - BrasilInvesting</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #002776;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #001a4d;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #FFCC00;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #003399;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      text-align: center;
+      color: #FFCC00;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      background-color: #FFCC00;
+      color: #002776;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e6b800;
+    }
+
+    .resultado {
+      margin-top: 30px;
+      background-color: #001a4d;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #001a4d;
+      color: #ccc;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <header class="topo">
+
+  <header>
     <h1>BrasilInvesting</h1>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="planos.html">Planos</a>
-      <a href="contratos.html">Contratos</a>
-      <a href="blog.html">Blog</a>
-      <a href="contato.html">Contato</a>
-      <a href="login.html">Login</a>
-    </nav>
   </header>
 
-  <main class="container">
-    <section class="calculadora">
-      <h2>Simule seu Investimento</h2>
-      <p>Descubra quanto você pode lucrar com a BrasilInvesting.</p>
+  <div class="container">
+    <h2>Simule seu investimento</h2>
+    <label for="valor">Valor investido (mínimo R$ 5.000):</label>
+    <input type="number" id="valor" placeholder="Digite o valor em reais" />
 
-      <div class="formulario">
-        <label for="valor">Valor do Investimento (mínimo R$ 5.000):</label>
-        <input type="number" id="valor" min="5000" placeholder="Digite o valor em reais" required />
+    <button onclick="calcular()">Calcular Retorno</button>
 
-        <button onclick="calcular()">Calcular</button>
-
-        <div id="resultado" class="resultado"></div>
-      </div>
-    </section>
-  </main>
+    <div class="resultado" id="resultado" style="display: none;">
+      <p><strong>Retorno mensal:</strong> <span id="mensal"></span></p>
+      <p><strong>Retorno total em 24 meses:</strong> <span id="total"></span></p>
+      <p><strong>Contrato encerra automaticamente após 24 meses.</strong></p>
+    </div>
+  </div>
 
   <footer>
-    <p>&copy; 2025 BrasilInvesting. Todos os direitos reservados.</p>
+    &copy; 2025 BrasilInvesting. Todos os direitos reservados.
   </footer>
 
   <script>
     function calcular() {
       const valor = parseFloat(document.getElementById('valor').value);
-      const resultado = document.getElementById('resultado');
-      
       if (isNaN(valor) || valor < 5000) {
-        resultado.innerHTML = '<p style="color:red;">Insira um valor válido (mínimo R$ 5.000).</p>';
+        alert("Por favor, insira um valor válido acima de R$ 5.000.");
         return;
       }
 
-      const rendimentoMensal = valor * 0.05;
-      const rendimentoTotal = rendimentoMensal * 24;
-      const valorFinal = valor + rendimentoTotal;
+      const mensal = valor * 0.05;
+      const total = mensal * 24;
 
-      resultado.innerHTML = `
-        <h3>Resultados da Simulação</h3>
-        <p><strong>Rendimento mensal (5%):</strong> R$ ${rendimentoMensal.toFixed(2)}</p>
-        <p><strong>Rendimento em 24 meses:</strong> R$ ${rendimentoTotal.toFixed(2)}</p>
-        <p><strong>Valor total ao final:</strong> R$ ${valorFinal.toFixed(2)}</p>
-      `;
+      document.getElementById('mensal').innerText = `R$ ${mensal.toFixed(2).replace('.', ',')}`;
+      document.getElementById('total').innerText = `R$ ${total.toFixed(2).replace('.', ',')}`;
+      document.getElementById('resultado').style.display = 'block';
     }
   </script>
+
 </body>
 </html>
