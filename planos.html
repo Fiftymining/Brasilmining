@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Planos - BrasilMining</title>
+  <title>Planos de Investimento - BrasilInvesting</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      margin: 0;
+      background-color: #f0f0f0;
+      color: #002776;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+      margin: 0;
+      padding: 0;
     }
 
     header {
@@ -20,53 +21,59 @@
       text-align: center;
     }
 
-    h1 {
+    header h1 {
       margin: 0;
-      font-size: 2em;
     }
 
     .container {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      padding: 40px 20px;
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    .plano {
-      background-color: #fff;
-      border: 2px solid #002776;
-      border-radius: 12px;
-      padding: 20px;
-      width: 300px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .plano h2 {
+    h2 {
       color: #002776;
-      font-size: 1.5em;
     }
 
-    .plano p {
-      font-size: 1.1em;
-      margin: 10px 0;
+    p {
+      font-size: 16px;
+      line-height: 1.6;
     }
 
-    .btn-pagar {
-      display: inline-block;
-      background-color: #FFCC00;
-      color: #002776;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
+    form {
+      margin-top: 30px;
+    }
+
+    label {
       font-weight: bold;
-      margin-top: 15px;
-      transition: background 0.3s;
+      display: block;
+      margin-bottom: 8px;
     }
 
-    .btn-pagar:hover {
-      background-color: #e6b800;
+    input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #002776;
+      color: #FFCC00;
+      padding: 12px 25px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    button:hover {
+      background-color: #001d5e;
     }
 
     footer {
@@ -74,42 +81,29 @@
       padding: 20px;
       background-color: #002776;
       color: #fff;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>BrasilMining - Planos de Investimento</h1>
+    <h1>BrasilInvesting</h1>
   </header>
 
   <div class="container">
-    <div class="plano">
-      <h2>Plano Inicial</h2>
-      <p>Investimento: R$ 5.000,00</p>
-      <p>Lucro Diário: R$ 7,00</p>
-      <p>Duração: 12 meses</p>
-      <a class="btn-pagar" href="https://pag.ae/7_JTKWo2P" target="_blank">Pagar agora</a>
-    </div>
-    
-    <div class="plano">
-      <h2>Plano Ouro</h2>
-      <p>Investimento: R$ 10.000,00</p>
-      <p>Lucro Diário: R$ 14,16</p>
-      <p>Duração: 12 meses</p>
-      <a class="btn-pagar" href="https://pag.ae/7_JTLwwba" target="_blank">Pagar agora</a>
-    </div>
+    <h2>Plano de Investimento Flexível</h2>
+    <p>Invista com liberdade! O valor mínimo para começar é de <strong>R$ 5.000</strong>. Acima disso, você decide quanto deseja aplicar.</p>
+    <p>Com rendimento mensal de até <strong>5%</strong>, seu dinheiro trabalha para você com segurança, transparência e parceria com grandes instituições.</p>
 
-    <div class="plano">
-      <h2>Plano Elite</h2>
-      <p>Investimento: R$ 100.000,00</p>
-      <p>Lucro Diário: R$ 166,66</p>
-      <p>Duração: 12 meses</p>
-      <a class="btn-pagar" href="https://pag.ae/7_JTM32ra" target="_blank">Pagar agora</a>
-    </div>
+    <form action="pagamento.html" method="GET">
+      <label for="valor">Informe o valor que deseja investir:</label>
+      <input type="number" id="valor" name="valor" min="5000" required placeholder="Ex: 10000" />
+      <button type="submit">Investir agora</button>
+    </form>
   </div>
 
   <footer>
-    &copy; 2025 BrasilMining. Todos os direitos reservados.
+    &copy; 2025 BrasilInvesting. Todos os direitos reservados.
   </footer>
 </body>
 </html>
