@@ -1,142 +1,118 @@
-/* Estilo principal unificado - BrasilInvesting */
+/* style.css — Tema BrasilInvesting (Cores Banco do Brasil) */
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #ffffff;
-  color: #002776;
+  background-color: #002776;
+  color: #ffffff;
 }
 
+/* Cabeçalho padrão */
 header {
-  background-color: #002776;
-  color: #FFCC00;
+  background-color: #001a4d;
   padding: 20px;
   text-align: center;
 }
 
-nav {
-  background-color: #001b4d;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px;
-}
-
-nav a {
+header h1 {
   color: #FFCC00;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  margin: 0;
 }
 
-nav a:hover {
-  color: #ffffff;
-}
-
-main {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-h1, h2, h3 {
-  color: #002776;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-.button, button, input[type="submit"] {
-  background-color: #FFCC00;
-  color: #002776;
-  font-weight: bold;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover, button:hover, input[type="submit"]:hover {
-  background-color: #e6b800;
-}
-
-input, textarea, select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1em;
-}
-
+/* Rodapé padrão */
 footer {
-  background-color: #002776;
-  color: #fff;
+  background-color: #001a4d;
+  color: #cccccc;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
 }
 
-.card {
-  background-color: #f4f4f4;
-  padding: 20px;
-  margin: 15px 0;
-  border-left: 5px solid #FFCC00;
-  border-radius: 8px;
-}
-
-.highlight {
-  color: #FFCC00;
-  font-weight: bold;
-}
-
-.plan-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.plan-card {
-  background-color: #ffffff;
-  border: 2px solid #002776;
-  border-radius: 10px;
-  padding: 25px;
-  width: 300px;
-  box-shadow: 0 0 10px rgba(0, 39, 118, 0.2);
-}
-
-.plan-card h3 {
+/* Botões */
+button,
+input[type="submit"] {
+  background-color: #FFCC00;
   color: #002776;
-  margin-top: 0;
-}
-
-.plan-card .price {
-  color: #FFCC00;
-  font-size: 24px;
   font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-.plan-card .btn {
-  margin-top: 15px;
-  display: block;
+button:hover,
+input[type="submit"]:hover {
+  background-color: #e6b800;
+}
+
+/* Links */
+a {
+  color: #FFCC00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Container padrão */
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Cartões e blocos */
+.card {
+  background-color: #003399;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Títulos padrão */
+h2 {
+  color: #FFCC00;
+}
+
+h3 {
+  color: #FFCC00;
+}
+
+/* Formulários */
+input,
+textarea,
+select {
   width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #002776;
 }
 
-@media (max-width: 768px) {
-  .plan-container {
-    flex-direction: column;
-    align-items: center;
-  }
+/* Tabela (se usar em relatórios) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #003399;
+  color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
 
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #001a4d;
+}
+
+th {
+  background-color: #001a4d;
+  color: #FFCC00;
 }
