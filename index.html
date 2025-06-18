@@ -3,61 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BrasilInvesting - A Líder em Renda Fixa</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="top-bar" style="background-color: #002776; color: white;">
-    <div class="container">
-      <h1>BrasilInvesting</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="planos.html">Planos</a></li>
-          <li><a href="calculadora.html">Calculadora</a></li>
-          <li><a href="contrato.html">Contrato</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contato.html">Contato</a></li>
-          <li><a href="login.html">Login</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <title>BrasilInvesting - Investimentos Inteligentes</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
 
-  <section class="hero" style="background-color: #FFCC00; color: #002776;">
-    <div class="container">
-      <h2>Invista com quem lidera em renda fixa no Brasil</h2>
-      <p>Experiência de gestores com mais de 10 anos no mercado financeiro, oferecendo até <strong>5% de rendimento ao mês</strong>.</p>
-      <a href="planos.html" class="btn-azul">Conheça os Planos</a>
-    </div>
-  </section>
+    header {
+      background-color: #002776;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
 
-  <section class="features container">
-    <div class="feature-box">
-      <h3>Rendimento Real</h3>
-      <p>Invista R$100.000 e receba até R$5.000 por mês.</p>
-    </div>
-    <div class="feature-box" style="background-color:#002776; color:white;">
-      <h3>Flexibilidade</h3>
-      <p>Contratos de 24 meses. Saques liberados após 45 dias.</p>
-    </div>
-    <div class="feature-box">
-      <h3>Suporte Humanizado</h3>
-      <p>WhatsApp e e-mail com atendimento por gerente exclusivo.</p>
-    </div>
-  </section>
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-  <section class="parceiros container">
-    <h2 style="color: #002776;">Nossos Parceiros</h2>
-    <p><strong>Nacionais:</strong> Banco do Brasil, Petrobras, Itaú, Vale, Weg, Ambev, BTG Pactual, Bradesco, Santander.</p>
-    <p><strong>Internacionais:</strong> Microsoft, Apple, Amazon, Google, Meta, Tesla.</p>
-    <p><strong>Criptomoedas:</strong> Bitcoin, Ethereum, USDT, BNB, Solana, XRP, Dogecoin e mais.</p>
-  </section>
+    header p {
+      font-size: 1.2rem;
+      color: #FFCC00;
+    }
 
-  <footer style="background-color: #002776; color: white;">
-    <div class="container">
-      <p>&copy; 2025 BrasilInvesting. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-</body>
-</html>
+    nav {
+      background-color: #001d4a;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      background: linear-gradient(#002776, #001d4a);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #FFCC00;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .cta-button {
+      margin-top: 30px;
+      background-color: #FFCC00;
+      color: #002776;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h3 {
+      color: #002776;
+      margin-bottom: 15px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-left: 5px solid #FFCC00;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    footer {
+     
